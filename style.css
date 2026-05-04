@@ -1,0 +1,3290 @@
+﻿/* ============================================
+   Xpert Surgical Solution - Global Stylesheet
+   Brand: Red #FF4D4D / Blue #4466CC
+   ============================================ */
+
+:root {
+  --xss-red: #FF4D4D;
+  --xss-red-dark: #E63E3E;
+  --xss-navy: #4466CC;
+  --xss-navy-dark: #2B438E;
+  --xss-light: #ffffff;
+  --xss-grey: #6c7589;
+  --xss-border: #e5e9f2;
+  --xss-text: #1f2a44;
+}
+
+html, body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--xss-text);
+  background: #ffffff;
+  scroll-behavior: smooth;
+}
+
+a { text-decoration: none; }
+
+/* ===== Top Info Bar ===== */
+.top-bar {
+  background: linear-gradient(90deg, var(--xss-navy-dark) 0%, var(--xss-navy) 100%);
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.45rem 0;
+}
+.top-bar a {
+  color: #fff;
+  margin-right: 1.25rem;
+  opacity: 0.9;
+  transition: opacity .2s ease;
+}
+.top-bar a:hover { opacity: 1; color: #ffffff; }
+.top-bar i { color: var(--xss-red); margin-right: .35rem; }
+
+/* ===== Navbar ===== */
+.navbar-xss {
+  background: #ffffff;
+  box-shadow: 0 2px 14px rgba(68, 102, 204,0.07);
+  /* padding: .75rem 0; */
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+}
+.navbar-xss .navbar-brand img {
+  height: 56px;
+  width: auto;
+}
+.navbar-xss .nav-link {
+  color: var(--xss-navy) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.6rem 1rem !important;
+  position: relative;
+  transition: color .2s ease;
+}
+.navbar-xss .nav-link:hover,
+.navbar-xss .nav-link.active {
+  color: var(--xss-red) !important;
+}
+.navbar-xss .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 4px;
+  height: 3px;
+  background: var(--xss-red);
+  border-radius: 2px;
+}
+.navbar-xss .dropdown-menu {
+  border: none;
+  border-top: 3px solid var(--xss-red);
+  border-radius: 0 0 .5rem .5rem;
+  box-shadow: 0 8px 24px rgba(68, 102, 204,0.12);
+  padding: .5rem 0;
+  margin-top: 0;
+}
+.navbar-xss .dropdown-item {
+  font-weight: 500;
+  color: var(--xss-navy);
+  padding: .6rem 1.25rem;
+}
+.navbar-xss .dropdown-item:hover,
+.navbar-xss .dropdown-item.active {
+  background: var(--xss-light);
+  color: var(--xss-red);
+}
+.btn-quote {
+  background: linear-gradient(135deg, var(--xss-red) 0%, var(--xss-red-dark) 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: .55rem 1.25rem;
+  border-radius: 30px;
+  transition: all .2s ease;
+}
+.btn-quote:hover { background: var(--xss-red-dark); color: #fff; transform: translateY(-1px); }
+
+/* ===== Buttons ===== */
+.btn-primary-xss {
+  background: linear-gradient(135deg, var(--xss-red) 0%, var(--xss-red-dark) 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: .75rem 1.75rem;
+  border-radius: 4px;
+  transition: all .2s ease;
+}
+.btn-primary-xss:hover { background: var(--xss-red-dark); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 77, 77,.25); }
+
+.btn-outline-xss {
+  background: transparent;
+  color: var(--xss-navy);
+  border: 2px solid var(--xss-navy);
+  font-weight: 600;
+  padding: .65rem 1.65rem;
+  border-radius: 4px;
+  transition: all .2s ease;
+}
+.btn-outline-xss:hover { background: var(--xss-navy); color: #fff; }
+
+/* ===== Hero (IBP-style, image background) ===== */
+.hero {
+  position: relative;
+  min-height: 580px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  /* background: url(./img/jp.jpg); */
+  /* width: 1440px; */
+  /* background:
+    linear-gradient(105deg, rgba(43, 67, 142,0.1) 0%, rgba(68, 102, 204,0.1) 45%, rgba(68, 102, 204,0.1) 100%); */
+}
+/* .hero::after {
+  content: "";
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to top, #fff 0%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+} */
+
+/* .container{
+  background: url(./img/Untitled-8.jpg);
+} */
+.hero h1 {
+  font-weight: 800;
+  font-size: 3.4rem;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+.hero h1 span { color: #ff5b66; }
+.hero h1 .accent-block {
+  display: inline-block;
+  padding: .15rem .8rem;
+  background: var(--xss-red);
+  color: #fff;
+  border-radius: 6px;
+}
+.hero p.lead {
+  font-size: 1.15rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+}
+.hero .hero-badges {
+  display: flex; flex-wrap: wrap; gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+.hero .hero-badges div {
+  display: flex; align-items: center; gap: .55rem;
+  font-weight: 500;
+}
+.hero .hero-badges i { color: #ff8c95; font-size: 1.1rem; }
+
+/* ===== Scrolling Product Marquee (IBP-style strip) ===== */
+.marquee-strip {
+  background: linear-gradient(90deg, var(--xss-red) 0%, var(--xss-red-dark) 100%);
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+.marquee-strip:hover .marquee-track { animation-play-state: paused; }
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  padding: 1.1rem 2.25rem;
+  white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,.18);
+}
+.marquee-item i { font-size: 1.2rem; opacity: .9; }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Carousel Overrides */
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: var(--red);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0.7;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-item {
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+/* ===== Page Banner ===== */
+.page-banner {
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 4rem 0 3rem;
+  text-align: center;
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-banner h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+.page-banner .breadcrumb-nav a { color: #ffd6d8; }
+.page-banner .breadcrumb-nav span { color: rgba(255,255,255,.7); margin: 0 .4rem; }
+
+/* ===== Section ===== */
+.section { padding: 5rem 0; }
+.section-light { background: var(--xss-light); }
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-title small {
+  display: inline-block;
+  color: var(--xss-red);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: .8rem;
+  margin-bottom: .75rem;
+}
+.section-title h2 {
+  color: var(--xss-navy);
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-bottom: .85rem;
+}
+.section-title p {
+  color: var(--xss-grey);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ===== Service / Feature Cards ===== */
+.service-card {
+  background: #fff;
+  border: 1px solid var(--xss-border);
+  border-radius: 10px;
+  padding: 2rem 1.75rem;
+  height: 100%;
+  transition: all .25s ease;
+  text-align: center;
+}
+.service-card:hover {
+  border-color: var(--xss-red);
+  box-shadow: 0 12px 30px rgba(68, 102, 204,.1);
+  transform: translateY(-6px);
+}
+.service-icon {
+  width: 70px; height: 70px;
+  background: rgba(255, 77, 77,.08);
+  color: var(--xss-red);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+  transition: all .25s ease;
+}
+.service-card:hover .service-icon {
+  background: var(--xss-red);
+  color: #fff;
+  transform: rotate(-8deg);
+}
+.service-card h5 {
+  color: var(--xss-navy);
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+.service-card p { color: var(--xss-grey); margin-bottom: 0; font-size: .95rem; }
+
+/* ===== Trust Badges ===== */
+.trust-strip {
+  background: #fff;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--xss-border);
+  border-bottom: 1px solid var(--xss-border);
+}
+.trust-item {
+  display: flex; align-items: center; gap: .9rem;
+  color: var(--xss-navy);
+  font-weight: 600;
+}
+.trust-item i {
+  font-size: 2rem;
+  color: var(--xss-red);
+  flex-shrink: 0;
+}
+.trust-item small {
+  color: var(--xss-grey);
+  font-weight: 400;
+  font-size: .82rem;
+  display: block;
+}
+
+/* ===== Product / Equipment Cards ===== */
+.equipment-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--xss-border);
+  transition: all .25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.equipment-card:hover {
+  box-shadow: 0 14px 30px rgba(68, 102, 204,.12);
+  transform: translateY(-4px);
+}
+.equipment-card .img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: var(--xss-light);
+}
+.equipment-card .img-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .4s ease;
+}
+.equipment-card:hover .img-wrap img { transform: scale(1.06); }
+.equipment-card .tag {
+  position: absolute; top: 12px; left: 12px;
+  background: var(--xss-red);
+  color: #fff;
+  padding: 4px 12px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.equipment-card .body {
+  padding: 1.25rem 1.25rem 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.equipment-card h5 {
+  color: var(--xss-navy);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: .5rem;
+}
+.equipment-card p {
+  color: var(--xss-grey);
+  font-size: .9rem;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+.equipment-card .footer-row {
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--xss-border);
+  padding-top: 1rem;
+}
+.equipment-card .price-tag {
+  color: var(--xss-red);
+  font-weight: 700;
+}
+.equipment-card .more {
+  color: var(--xss-navy);
+  font-weight: 600;
+  font-size: .9rem;
+}
+.equipment-card .more:hover { color: var(--xss-red); }
+
+/* ===== About Page ===== */
+.about-img {
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 14px 35px rgba(68, 102, 204,.15);
+}
+.about-list {
+  list-style: none;
+  padding: 0; margin: 1.5rem 0 0;
+}
+.about-list li {
+  padding: .55rem 0;
+  color: var(--xss-text);
+  display: flex; align-items: flex-start; gap: .65rem;
+}
+.about-list li i {
+  color: var(--xss-red);
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+.stat-box {
+  background: #fff;
+  border-left: 4px solid var(--xss-red);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 14px rgba(68, 102, 204,.06);
+  height: 100%;
+}
+.stat-box h3 {
+  color: var(--xss-navy);
+  font-weight: 800;
+  font-size: 2.2rem;
+  margin-bottom: .15rem;
+}
+.stat-box p { color: var(--xss-grey); margin: 0; font-size: .9rem; font-weight: 500; }
+
+/* ===== Mission / Vision Cards ===== */
+.mv-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  border-top: 4px solid var(--xss-red);
+  box-shadow: 0 8px 24px rgba(68, 102, 204,.06);
+  height: 100%;
+}
+.mv-card .mv-icon {
+  width: 60px; height: 60px;
+  background: var(--xss-navy);
+  color: #fff;
+  border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.mv-card h4 { color: var(--xss-navy); font-weight: 700; }
+
+/* ===== CTA Strip ===== */
+.cta-strip {
+  background: linear-gradient(90deg, var(--xss-red) 0%, var(--xss-red-dark) 100%);
+  color: #fff;
+  padding: 3rem 0;
+}
+.cta-strip h3 { font-weight: 700; margin-bottom: .25rem; }
+.cta-strip p { opacity: .92; margin: 0; }
+.cta-strip .btn-light {
+  background: #fff;
+  color: var(--xss-red);
+  font-weight: 700;
+  padding: .75rem 1.75rem;
+  border-radius: 30px;
+  border: none;
+}
+.cta-strip .btn-light:hover { background: var(--xss-navy); color: #fff; }
+
+/* ===== Contact ===== */
+.contact-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 6px 18px rgba(68, 102, 204,.07);
+  height: 100%;
+  text-align: center;
+  border: 1px solid var(--xss-border);
+  transition: all .25s ease;
+}
+.contact-card:hover { transform: translateY(-4px); border-color: var(--xss-red); }
+.contact-card .ci-icon {
+  width: 60px; height: 60px;
+  background: rgba(255, 77, 77,.1);
+  color: var(--xss-red);
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.contact-card h6 { color: var(--xss-navy); font-weight: 700; margin-bottom: .35rem; }
+.contact-card p, .contact-card a {
+  color: var(--xss-grey);
+  font-size: .95rem;
+  margin: 0;
+  word-break: break-word;
+}
+.contact-card a:hover { color: var(--xss-red); }
+
+.form-control, .form-select {
+  border: 1.5px solid var(--xss-border);
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  font-size: .95rem;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--xss-red);
+  box-shadow: 0 0 0 3px rgba(255, 77, 77,.12);
+}
+.form-label { font-weight: 600; color: var(--xss-navy); font-size: .9rem; }
+.map-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border: 0;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ===== Surgical Page Categories ===== */
+.cat-card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid var(--xss-border);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  transition: all .25s ease;
+  height: 100%;
+}
+.cat-card:hover {
+  background: var(--xss-navy);
+  color: #fff;
+  border-color: var(--xss-navy);
+  transform: translateY(-5px);
+}
+.cat-card i {
+  font-size: 2.4rem;
+  color: var(--xss-red);
+  margin-bottom: .9rem;
+  transition: all .25s ease;
+}
+.cat-card:hover i { color: #fff; }
+.cat-card h6 { font-weight: 700; margin: 0; font-size: .98rem; }
+
+/* ===== Footer ===== */
+.footer {
+  background: #0f1a3a;
+  color: #b8c0d6;
+  padding: 4rem 0 0;
+}
+.footer h6 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  font-size: .9rem;
+  letter-spacing: 1px;
+}
+.footer h6::after {
+  content: "";
+  display: block;
+  width: 36px; height: 3px;
+  background: var(--xss-red);
+  margin-top: .5rem;
+  border-radius: 2px;
+}
+.footer a {
+  color: #b8c0d6;
+  display: block;
+  padding: .35rem 0;
+  font-size: .92rem;
+  transition: color .2s ease;
+}
+.footer a:hover { color: var(--xss-red); padding-left: 5px; }
+.footer img.footer-logo { height: 60px; margin-bottom: 1rem; }
+.footer .small-text { font-size: .9rem; line-height: 1.7; }
+.footer .social a {
+  display: inline-flex;
+  width: 36px; height: 36px;
+  align-items: center; justify-content: center;
+  background: rgba(255,255,255,.08);
+  border-radius: 50%;
+  margin-right: .5rem;
+  padding: 0;
+  color: #fff;
+}
+.footer .social a:hover { background: var(--xss-red); padding-left: 0; }
+.footer .copyright {
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin-top: 3rem;
+  padding: 1.25rem 0;
+  font-size: .85rem;
+  color: #8a92a8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer .copyright .design-credit {
+  white-space: nowrap;
+}
+.footer .copyright a {
+  display: inline;
+  padding: 0;
+  text-decoration: underline;
+  color: inherit;
+}
+.footer .copyright a:hover {
+  color: var(--xss-red);
+  padding-left: 0;
+}
+
+@media (max-width: 767.98px) {
+  .footer .copyright {
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .footer .copyright .design-credit {
+    white-space: normal;
+  }
+}
+.footer .footer-contact {
+  display: flex; align-items: flex-start; gap: .65rem;
+  padding: .35rem 0;
+  font-size: .92rem;
+}
+.footer .footer-contact i { color: var(--xss-red); margin-top: 4px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 991.98px) {
+  .hero { padding: 3.5rem 0 4rem; text-align: center; }
+  .hero h1 { font-size: 2.3rem; }
+  .hero .hero-img { margin-top: 2rem; max-width: 80%; }
+  .navbar-xss .nav-link.active::after { display: none; }
+  .navbar-xss .navbar-collapse { padding-top: 1rem; }
+  .section { padding: 3.5rem 0; }
+  .section-title h2 { font-size: 1.8rem; }
+  .page-banner h1 { font-size: 2rem; }
+  .navbar-xss .navbar-brand img { height: 46px; }
+}
+@media (max-width: 575.98px) {
+  .top-bar { font-size: .78rem; text-align: center; }
+  .top-bar a { display: inline-block; margin: 0 .5rem; }
+  .hero h1 { font-size: 1.9rem; }
+  .stat-box h3 { font-size: 1.7rem; }
+}
+
+/* ===== Equipment Page  Category Blocks ===== */
+.cat-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--xss-border);
+}
+.cat-block:first-of-type { border-top: 0; padding-top: 0; margin-top: 1rem; }
+.cat-head {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.cat-icon {
+  flex: 0 0 auto;
+  width: 64px; height: 64px;
+  background: linear-gradient(135deg, var(--xss-red), #b30410);
+  color: #fff;
+  display: grid; place-items: center;
+  border-radius: 14px;
+  font-size: 1.7rem;
+  box-shadow: 0 8px 20px rgba(255, 77, 77,.25);
+}
+.cat-head h3 {
+  color: var(--xss-navy); font-weight: 700;
+  font-size: 1.55rem; margin: 0;
+}
+.cat-head p { color: var(--xss-grey); margin: .15rem 0 0; font-size: .95rem; }
+
+/* Product cards */
+.prod-card {
+  background: #fff;
+  border: 1px solid var(--xss-border);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.prod-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(68, 102, 204,.12);
+}
+.prod-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.prod-card .pc-tag {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: var(--xss-red);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: .25rem .6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.prod-card .pc-body { padding: 1rem 1.1rem 1.2rem; }
+.prod-card .pc-body h6 {
+  color: var(--xss-navy); font-weight: 700; margin-bottom: .35rem;
+  font-size: 1.05rem;
+}
+.prod-card .pc-meta {
+  display: block;
+  color: var(--xss-grey);
+  font-size: .85rem;
+  margin-bottom: .85rem;
+}
+.prod-card .pc-btn {
+  display: inline-flex; align-items: center; gap: .35rem;
+  color: var(--xss-red);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .9rem;
+}
+.prod-card .pc-btn:hover { color: var(--xss-navy); }
+.prod-card .pc-btn i { transition: transform .2s ease; }
+.prod-card .pc-btn:hover i { transform: translateX(3px); }
+
+/* Horizontal product card variant */
+.prod-card.prod-row {
+  display: flex; flex-direction: row;
+}
+.prod-card.prod-row img { width: 180px; height: 100%; min-height: 140px; }
+.prod-card.prod-row .pc-body { flex: 1; padding: 1.1rem 1.25rem; }
+@media (max-width: 575px) {
+  .prod-card.prod-row { flex-direction: column; }
+  .prod-card.prod-row img { width: 100%; height: 180px; }
+}
+
+/* Mini cards (icon + label) for accessory grids */
+.mini-card {
+  display: flex; align-items: center; gap: .85rem;
+  background: #fff;
+  border: 1px solid var(--xss-border);
+  border-left: 4px solid var(--xss-red);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  height: 100%;
+  transition: all .2s ease;
+}
+.mini-card:hover {
+  border-left-color: var(--xss-navy);
+  box-shadow: 0 6px 16px rgba(68, 102, 204,.08);
+  transform: translateY(-2px);
+}
+.mini-card i {
+  flex: 0 0 auto;
+  font-size: 1.6rem;
+  color: var(--xss-red);
+  width: 44px; height: 44px;
+  background: rgba(255, 77, 77,.08);
+  border-radius: 8px;
+  display: grid; place-items: center;
+}
+.mini-card h6 { color: var(--xss-navy); margin: 0 0 .15rem; font-size: 1rem; font-weight: 700; }
+.mini-card span { color: var(--xss-grey); font-size: .82rem; }
+
+/* Step cards */
+.step-card {
+  background: #fff;
+  border: 1px solid var(--xss-border);
+  border-radius: 12px;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+.step-card .step-num {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--xss-red);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: grid; place-items: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 6px 16px rgba(255, 77, 77,.3);
+}
+.step-card h5 { color: var(--xss-navy); font-weight: 700; }
+.step-card p { color: var(--xss-grey); font-size: .92rem; margin: 0; }
+
+/* ===== Equipment Rent Page Styles (migrated) ===== */
+
+/* Source: equipment-rent.css */
+
+/* ============================================================
+   XPERT SURGICAL SOLUTION — Global Stylesheet
+   Colors from Logo:
+     Navy Blue : #4466CC
+     Red Accent: #FF4D4D
+     Light Grey : #ffffff
+     Mid Grey  : #ffffff
+   ============================================================ */
+
+/* ── CSS Variables ─────────────────────────────────────── */
+:root {
+  --navy:       #4466CC;
+  --navy-dark:  #2B438E;
+  --navy-light: #5C85FF;
+  --red:        #FF4D4D;
+  --red-dark:   #E63E3E;
+  --white:      #ffffff;
+  --light:      #ffffff;
+  --border:     #e2e8f0;
+  --mid:        #6B7280;
+  --dark:       #1a1a2e;
+  --font-head:  'Outfit', sans-serif;
+  --font-body:  'Outfit', sans-serif;
+  --radius:     8px;
+  --shadow:     0 4px 24px rgba(68, 102, 204, 0.10);
+  --shadow-lg:  0 8px 40px rgba(68, 102, 204, 0.18);
+  --transition: 0.28s cubic-bezier(.4,0,.2,1);
+}
+
+/* â”€â”€ Reset & Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) *, :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) *::before, :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) {
+  font-family: var(--font-body);
+  color: var(--dark);
+  background: var(--white);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) h1, :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) h2, :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) h3, :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) h4, :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) h5, :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) h6 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) a { text-decoration: none; color: inherit; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) img { max-width: 100%; display: block; }
+
+/* â”€â”€ Utility â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .section-pad     { padding: 90px 0; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .section-pad-sm  { padding: 60px 0; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .text-navy       { color: var(--navy) !important; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .text-red        { color: var(--red)  !important; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .bg-navy         { background: var(--navy); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .bg-light-grey   { background: var(--light); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .fw-800          { font-weight: 800; }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .section-label {
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: block;
+  margin-bottom: 10px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .section-title {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .section-subtitle {
+  color: var(--mid);
+  font-size: 1.05rem;
+  max-width: 560px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .divider-red {
+  width: 52px;
+  height: 4px;
+  background: var(--red);
+  border-radius: 2px;
+  margin: 16px 0 28px;
+}
+
+/* â”€â”€ Buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .btn-xpert {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  border-radius: var(--radius);
+  border: 2px solid var(--red);
+  transition: var(--transition);
+  cursor: pointer;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .btn-xpert:hover {
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 77, 77,0.30);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .btn-xpert-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  border-radius: var(--radius);
+  border: 2px solid rgba(255,255,255,0.6);
+  transition: var(--transition);
+  cursor: pointer;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .btn-xpert-outline:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--white);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .btn-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: var(--white);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  border-radius: var(--radius);
+  border: 2px solid var(--navy);
+  transition: var(--transition);
+  cursor: pointer;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .btn-navy:hover {
+  background: var(--navy-dark);
+  border-color: var(--navy-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* â”€â”€ Navbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar {
+  background: var(--white);
+  border-bottom: none;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 14px rgba(68, 102, 204,0.06);
+  transition: box-shadow var(--transition);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar .container,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .container {
+  max-width: 1640px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .navbar-brand img {
+  height: 74px;
+  width: auto;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .navbar-nav {
+  gap: 18px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-link {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--navy) !important;
+  padding: 22px 18px !important;
+  position: relative;
+  transition: color var(--transition);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 18px;
+  right: 18px;
+  height: 3px;
+  background: var(--red);
+  border-radius: 999px;
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-link:hover,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-link.active {
+  color: var(--red) !important;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-link:hover::after,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .dropdown-menu {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px 0;
+  min-width: 240px;
+  border-top: 3px solid var(--red);
+  margin-top: 0;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .dropdown-item {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--navy);
+  padding: 10px 22px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .dropdown-item:hover {
+  background: var(--light);
+  color: var(--red);
+  padding-left: 28px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .navbar-toggler {
+  border: 2px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231B2E5E' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-quote-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FF4D4D;
+  color: var(--white);
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 14px 28px;
+  min-width: 166px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-quote-btn:hover {
+  background: var(--red-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(255, 77, 77,0.24);
+}
+
+/* Top Info Bar */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar {
+  background: var(--navy);
+  color: rgba(255,255,255,0.90);
+  font-size: 0.98rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  padding: 7px 0;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar-contact,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar-hours {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar a,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar a { color: rgba(255,255,255,0.92); transition: color var(--transition); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar a:hover { color: var(--white); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar i { color: #FF4D4D; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar .top-bar-divider { opacity: 0.3; margin: 0 12px; }
+
+/* ── Hero Section ────────────────────────────────────────── */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero {
+  min-height: 88vh;
+  background: linear-gradient(105deg, var(--navy-dark) 0%, var(--navy) 55%, var(--navy-light) 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero::after {
+  content: '';
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 77, 77,0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-content { position: relative; z-index: 2; }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-badge {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 77, 77,0.18);
+  border: 1px solid rgba(255, 77, 77,0.4);
+  color: #ff9b9b;
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-badge span { width: 6px; height: 6px; background: var(--red); border-radius: 50%; display: inline-block; }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-title {
+  font-family: var(--font-head);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-title .accent { color: var(--red); }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-desc {
+  color: rgba(255,255,255,0.72);
+  font-size: 1.08rem;
+  max-width: 480px;
+  margin-bottom: 36px;
+  line-height: 1.75;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-stat {
+  text-align: left;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-stat .num {
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-stat .num span { color: var(--red); }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-stat .lbl {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-image-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-img-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-img-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-img-badge {
+  position: absolute;
+  bottom: 24px;
+  left: -20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 12px 18px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-img-badge .badge-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-img-badge .badge-text strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-img-badge .badge-text span {
+  font-size: 0.75rem;
+  color: var(--mid);
+}
+
+/* â”€â”€ Trust Badges â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .trust-bar {
+  background: var(--navy-dark);
+  padding: 22px 0;
+  border-bottom: 3px solid var(--red);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.80);
+  font-family: var(--font-head);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .trust-item i {
+  color: var(--red);
+  font-size: 1.4rem;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .trust-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* â”€â”€ Service Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: var(--transition);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--red);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-card:hover::before {
+  transform: scaleX(1);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-icon {
+  width: 72px;
+  height: 72px;
+  background: var(--light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  font-size: 2rem;
+  color: var(--red);
+  transition: var(--transition);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-card:hover .service-icon {
+  background: var(--red);
+  color: var(--white);
+  transform: scale(1.08);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-card h5 {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-card p {
+  color: var(--mid);
+  font-size: 0.92rem;
+  margin-bottom: 20px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-link {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap var(--transition);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .service-card:hover .service-link { gap: 10px; }
+
+/* â”€â”€ Product / Equipment Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .product-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .product-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: transparent;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .product-card-img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .product-card-body {
+  padding: 22px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .product-card-tag {
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .product-card h5 {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .product-card p {
+  color: var(--mid);
+  font-size: 0.90rem;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+/* â”€â”€ Why Choose Us â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .why-card {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 28px;
+  align-items: flex-start;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .why-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: var(--red);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.4rem;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .why-text h6 {
+  font-family: var(--font-head);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .why-text p {
+  color: var(--mid);
+  font-size: 0.90rem;
+  margin: 0;
+}
+
+/* ── CTA Band ─────────────────────────────────────────── */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cta-band {
+  background: linear-gradient(105deg, var(--navy-dark) 0%, var(--navy) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cta-band::before {
+  content: '';
+  position: absolute;
+  right: -120px;
+  top: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 77, 77,0.20) 0%, transparent 65%);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cta-band h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cta-band p {
+  color: rgba(255,255,255,0.68);
+  font-size: 1.05rem;
+}
+
+/* â”€â”€ Testimonial â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .testimonial-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 28px;
+  position: relative;
+  transition: var(--transition);
+  height: 100%;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .testimonial-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .testimonial-card .quote-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--red);
+  opacity: 0.18;
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  font-family: Georgia, serif;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .testimonial-card p {
+  color: var(--mid);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 24px 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .testimonial-author .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 1.2rem;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .testimonial-author .info strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .testimonial-author .info span {
+  font-size: 0.80rem;
+  color: var(--mid);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .star-rating { color: #f59e0b; font-size: 0.85rem; letter-spacing: 2px; }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .page-hero {
+  background: url(./img/about_banner.png) center center / 100% 100% no-repeat;
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .page-hero::after {
+  content: '';
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(255, 77, 77,0.18) 0%, transparent 65%);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .page-hero-title {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .page-hero-breadcrumb {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.6);
+  position: relative;
+  z-index: 1;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .page-hero-breadcrumb a { color: rgba(255,255,255,0.6); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .page-hero-breadcrumb a:hover { color: var(--white); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .page-hero-breadcrumb .sep { margin: 0 8px; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .page-hero-breadcrumb .current { color: var(--red); }
+
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .stat-block {
+  text-align: center;
+  padding: 36px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: var(--transition);
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .stat-block:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .stat-block .num {
+  font-family: var(--font-head);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .stat-block .num span { color: var(--red); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .stat-block .lbl {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 8px;
+}
+
+/* â”€â”€ Team Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .team-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: var(--transition);
+  text-align: center;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .team-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .team-card img { width: 100%; height: 220px; object-fit: cover; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .team-card-body { padding: 22px 20px; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .team-card h6 {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .team-card span { font-size: 0.85rem; color: var(--red); font-weight: 600; }
+
+/* â”€â”€ Contact Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .contact-form-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 44px 40px;
+  box-shadow: var(--shadow);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .form-label {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .form-control, :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .form-select {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 11px 16px;
+  font-size: 0.95rem;
+  color: var(--dark);
+  transition: var(--transition);
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .form-control:focus, :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .form-select:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(68, 102, 204,0.10);
+  outline: none;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .contact-info-card {
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 40px 32px;
+  color: white;
+  height: 100%;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .contact-info-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+  align-items: flex-start;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .contact-info-item .ci-icon {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 77, 77,0.20);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff9b9b;
+  font-size: 1.2rem;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .contact-info-item h6 {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 4px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .contact-info-item p {
+  color: rgba(255,255,255,0.88);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .map-placeholder {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--mid);
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  overflow: hidden;
+  position: relative;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .map-placeholder i { font-size: 2.5rem; color: var(--red); margin-bottom: 12px; }
+
+/* â”€â”€ Filter / Tab Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .filter-btn {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+  transition: var(--transition);
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .filter-btn:hover,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .filter-btn.active {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
+
+/* â”€â”€ Feature List â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .feature-list { list-style: none; padding: 0; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.93rem;
+  color: var(--dark);
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .feature-list li:last-child { border-bottom: none; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .feature-list li i { color: var(--red); margin-top: 2px; flex-shrink: 0; }
+
+/* â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .site-footer {
+  background: var(--navy-dark);
+  color: rgba(255,255,255,0.70);
+  padding-top: 72px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-brand img { height: 90px; margin-bottom: 18px; }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-brand p {
+  font-size: 0.90rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.55);
+  max-width: 280px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-heading {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-links { list-style: none; padding: 0; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-links li { margin-bottom: 10px; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-links a {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.90rem;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-links a::before {
+  content: 'â€º';
+  color: var(--red);
+  font-weight: 700;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-links a:hover { color: var(--white); padding-left: 4px; }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.88rem;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-contact-item i { color: var(--red); margin-top: 3px; flex-shrink: 0; }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-bottom {
+  margin-top: 56px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 0;
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-bottom p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.35);
+  margin: 0;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .social-links { display: flex; gap: 10px; }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .social-links a {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.90rem;
+  transition: var(--transition);
+}
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .social-links a:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@media (max-width: 991.98px) {
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-link { padding: 14px 16px !important; }
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .xpert-navbar .nav-link::after { display: none; }
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero { min-height: auto; padding: 80px 0; }
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-image-wrap { margin-top: 48px; }
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-img-badge { left: 10px; }
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .trust-divider { display: none; }
+}
+
+@media (max-width: 767.98px) {
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .section-pad { padding: 64px 0; }
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .hero-stats { gap: 22px; }
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .contact-form-wrap { padding: 28px 20px; }
+  :is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .top-bar .d-none-mobile { display: none !important; }
+}
+
+/* Source: equipment-rent.html <style> block */
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-head);
+  font-size: 0.83rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-tab:hover,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-tab.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-section {
+  margin-bottom: 56px;
+  scroll-margin-top: 130px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--border);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-icon {
+  width: 46px;
+  height: 46px;
+  background: var(--red);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-section-header h3 {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-count {
+  margin-left: auto;
+  background: var(--light);
+  color: var(--mid);
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 13px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+/* product card */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: rgba(27, 46, 94, 0.12);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-img-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 180px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-card:hover .rent-img-wrap img {
+  transform: scale(1.06);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rbadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--navy);
+  color: white;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 11px;
+  border-radius: 50px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rdot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.93);
+  color: #16a34a;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rdot::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #16a34a;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-body {
+  padding: 16px 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-body h5 {
+  font-family: var(--font-head);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 7px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-body p {
+  color: var(--mid);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .btn-enq {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--red);
+  color: white;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.76rem;
+  padding: 8px 15px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .btn-enq:hover {
+  background: var(--red-dark);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* sidebar */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .sticky-sidebar {
+  position: sticky;
+  top: 88px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .sidebar-box {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin-bottom: 20px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .sb-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 0;
+  font-size: 0.86rem;
+  color: var(--dark);
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-nav-link:last-child {
+  border-bottom: none;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-nav-link i {
+  color: var(--red);
+  font-size: 0.95rem;
+  width: 18px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cat-nav-link:hover {
+  color: var(--red);
+  padding-left: 4px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .cn-count {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--mid);
+  background: var(--light);
+  padding: 1px 8px;
+  border-radius: 50px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .enquiry-box {
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin-bottom: 2px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .eq-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: white;
+  margin-bottom: 3px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .eq-sub {
+  font-size: 0.80rem;
+  color: rgba(255, 255, 255, 0.50);
+  margin-bottom: 16px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .enquiry-box .form-label {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.76rem;
+  margin-bottom: 3px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .enquiry-box .form-control,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .enquiry-box .form-select {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: white;
+  font-size: 0.83rem;
+  padding: 8px 12px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .enquiry-box .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .enquiry-box .form-control:focus,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .enquiry-box .form-select:focus {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.38);
+  box-shadow: none;
+  color: white;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .enquiry-box .form-select option {
+  background: var(--navy-dark);
+}
+
+/* step */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .step-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .step-circ {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  background: var(--red);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(215, 38, 61, 0.25);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .step-wrap h6 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .step-wrap p {
+  color: var(--mid);
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+/* plans */
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-card {
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  height: 100%;
+  transition: var(--transition);
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-card.featured {
+  border-color: var(--navy);
+  background: var(--navy);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-card.featured .plan-title,
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-card.featured .plan-sub {
+  color: white;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-card.featured .plan-desc {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-card.featured .plan-feat {
+  color: rgba(255, 255, 255, 0.80);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-card.featured .plan-feat i {
+  color: #7dd3fc;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-popular {
+  position: absolute;
+  top: 14px;
+  right: -30px;
+  background: var(--red);
+  color: white;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 44px;
+  transform: rotate(45deg);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-sub {
+  font-size: 0.78rem;
+  color: var(--mid);
+  margin-bottom: 12px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-desc {
+  font-size: 0.80rem;
+  color: var(--mid);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-feat {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 0;
+  font-size: 0.83rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  color: var(--dark);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-feat:last-of-type {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .plan-feat i {
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+/* Source: equipment-rent.html inline attributes */
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-hero-subtitle {
+  color: rgba(255,255,255,0.65);
+  max-width: 520px;
+  margin-top: 14px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-hero-stat-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-hero-stat-num {
+  font-family: var(--font-head);
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-hero-stat-label {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-category-sticky {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+  position: sticky;
+  top: 90px;
+  z-index: 900;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .step-wrap-last { margin-bottom: 0; }
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .rent-price-note {
+  font-size: 0.78rem;
+  color: var(--mid);
+}
+
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-policy-link { color: rgba(255,255,255,0.35); }
+:is(.equipment-rent-page, .equipment-sale-page, .surgical-page, .contact-page) .footer-policy-link:hover { color: var(--white); }
+
+/* ===== Equipment Sale Page Styles (migrated) ===== */
+
+/* Source: equipment-sale.html <style> block */
+
+/* â”€â”€ Sale page specific â”€â”€ */
+.equipment-sale-page .cat-tab-bar { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:0; }
+.equipment-sale-page .cat-tab {
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:var(--font-head); font-size:0.83rem; font-weight:600;
+  padding:8px 18px; border-radius:50px;
+  border:1.5px solid var(--border); background:var(--white);
+  color:var(--navy); cursor:pointer; transition:var(--transition);
+  text-decoration:none; white-space:nowrap;
+}
+.equipment-sale-page .cat-tab:hover,.equipment-sale-page .cat-tab.active { background:var(--navy); border-color:var(--navy); color:var(--white); }
+
+.equipment-sale-page .cat-section { margin-bottom:56px; scroll-margin-top:130px; }
+.equipment-sale-page .cat-section-header {
+  display:flex; align-items:center; gap:14px;
+  margin-bottom:26px; padding-bottom:14px;
+  border-bottom:2px solid var(--border);
+}
+.equipment-sale-page .cat-icon { width:46px; height:46px; background:var(--red); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-size:1.3rem; flex-shrink:0; }
+.equipment-sale-page .cat-section-header h3 { font-family:var(--font-head); font-size:1.3rem; font-weight:800; color:var(--navy); margin:0; }
+.equipment-sale-page .cat-count { margin-left:auto; background:var(--light); color:var(--mid); font-family:var(--font-head); font-size:0.75rem; font-weight:700; padding:3px 13px; border-radius:50px; white-space:nowrap; }
+
+/* Sale product card */
+.equipment-sale-page .sale-card {
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:16px; overflow:hidden;
+  height:100%; display:flex; flex-direction:column;
+  transition:var(--transition);
+  position:relative;
+}
+.equipment-sale-page .sale-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-5px); border-color:rgba(68, 102, 204,0.12); }
+
+.equipment-sale-page .sale-img-wrap { overflow:hidden; position:relative; height:190px; }
+.equipment-sale-page .sale-img-wrap img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease; }
+.equipment-sale-page .sale-card:hover .sale-img-wrap img { transform:scale(1.06); }
+
+.equipment-sale-page .sale-badge { position:absolute; top:10px; left:10px; font-family:var(--font-head); font-weight:700; font-size:0.66rem; letter-spacing:0.08em; text-transform:uppercase; padding:3px 11px; border-radius:50px; }
+.equipment-sale-page .badge-new { background:var(--navy); color:white; }
+.equipment-sale-page .badge-refurb { background:#7c3aed; color:white; }
+.equipment-sale-page .badge-hot { background:var(--red); color:white; }
+
+.equipment-sale-page .sale-warranty { position:absolute; bottom:10px; left:10px; background:rgba(255,255,255,0.93); color:var(--navy); font-family:var(--font-head); font-weight:700; font-size:0.66rem; text-transform:uppercase; padding:3px 10px; border-radius:50px; display:flex; align-items:center; gap:4px; }
+.equipment-sale-page .sale-warranty i { color:var(--red); }
+
+.equipment-sale-page .sale-body { padding:16px 18px 18px; flex:1; display:flex; flex-direction:column; }
+.equipment-sale-page .sale-tag { font-family:var(--font-head); font-size:0.70rem; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; color:var(--red); margin-bottom:5px; }
+.equipment-sale-page .sale-body h5 { font-family:var(--font-head); font-size:0.97rem; font-weight:700; color:var(--navy); margin-bottom:7px; }
+.equipment-sale-page .sale-body p { color:var(--mid); font-size:0.82rem; line-height:1.55; margin-bottom:12px; flex:1; }
+
+.equipment-sale-page .sale-specs { list-style:none; padding:0; margin-bottom:14px; }
+.equipment-sale-page .sale-specs li { display:flex; align-items:center; gap:7px; font-size:0.79rem; color:var(--dark); padding:4px 0; border-bottom:1px solid var(--border); }
+.equipment-sale-page .sale-specs li:last-child { border-bottom:none; }
+.equipment-sale-page .sale-specs li i { color:var(--red); flex-shrink:0; font-size:0.85rem; }
+
+.equipment-sale-page .sale-footer { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; margin-top:auto; }
+.equipment-sale-page .sale-price { font-family:var(--font-head); font-size:0.75rem; color:var(--mid); }
+.equipment-sale-page .sale-price strong { display:block; font-size:1.05rem; color:var(--navy); font-weight:800; }
+
+.equipment-sale-page .btn-buy { display:inline-flex; align-items:center; gap:6px; background:var(--navy); color:white; font-family:var(--font-head); font-weight:700; font-size:0.76rem; padding:8px 15px; border-radius:var(--radius); border:none; cursor:pointer; transition:var(--transition); text-decoration:none; white-space:nowrap; }
+.equipment-sale-page .btn-buy:hover { background:var(--navy-dark); color:white; transform:translateY(-1px); box-shadow:var(--shadow); }
+.equipment-sale-page .btn-enq { display:inline-flex; align-items:center; gap:6px; background:var(--red); color:white; font-family:var(--font-head); font-weight:700; font-size:0.76rem; padding:8px 15px; border-radius:var(--radius); border:none; cursor:pointer; transition:var(--transition); text-decoration:none; white-space:nowrap; }
+.equipment-sale-page .btn-enq:hover { background:var(--red-dark); color:white; transform:translateY(-1px); }
+
+/* Sidebar */
+.equipment-sale-page .sticky-sidebar { position:sticky; top:88px; }
+.equipment-sale-page .sidebar-box { background:var(--white); border:1.5px solid var(--border); border-radius:16px; padding:24px 20px; margin-bottom:18px; }
+.equipment-sale-page .sb-title { font-family:var(--font-head); font-weight:800; font-size:0.78rem; letter-spacing:0.10em; text-transform:uppercase; color:var(--navy); margin-bottom:14px; padding-bottom:10px; border-bottom:2px solid var(--border); }
+.equipment-sale-page .cat-nav-link { display:flex; align-items:center; gap:9px; padding:8px 0; font-size:0.86rem; color:var(--dark); border-bottom:1px solid var(--border); text-decoration:none; transition:var(--transition); font-weight:500; }
+.equipment-sale-page .cat-nav-link:last-child { border-bottom:none; }
+.equipment-sale-page .cat-nav-link i { color:var(--red); font-size:0.95rem; width:18px; }
+.equipment-sale-page .cat-nav-link:hover { color:var(--red); padding-left:4px; }
+.equipment-sale-page .cn-count { margin-left:auto; font-size:0.72rem; color:var(--mid); background:var(--light); padding:1px 8px; border-radius:50px; }
+
+.equipment-sale-page .enquiry-box { background:var(--navy); border-radius:16px; padding:24px 20px; }
+.equipment-sale-page .eq-title { font-family:var(--font-head); font-weight:800; font-size:1.05rem; color:white; margin-bottom:3px; }
+.equipment-sale-page .eq-sub { font-size:0.80rem; color:rgba(255,255,255,0.50); margin-bottom:16px; }
+.equipment-sale-page .enquiry-box .form-label { color:rgba(255,255,255,0.68); font-size:0.76rem; margin-bottom:3px; }
+.equipment-sale-page .enquiry-box .form-control,.equipment-sale-page .enquiry-box .form-select { background:rgba(255,255,255,0.09); border-color:rgba(255,255,255,0.18); color:white; font-size:0.83rem; padding:8px 12px; }
+.equipment-sale-page .enquiry-box .form-control::placeholder { color:rgba(255,255,255,0.35); }
+.equipment-sale-page .enquiry-box .form-control:focus,.equipment-sale-page .enquiry-box .form-select:focus { background:rgba(255,255,255,0.14); border-color:rgba(255,255,255,0.38); box-shadow:none; color:white; }
+.equipment-sale-page .enquiry-box .form-select option { background:var(--navy-dark); }
+
+/* Why buy section cards */
+.equipment-sale-page .why-buy-card {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:14px; padding:28px 22px;
+  display:flex; gap:18px; align-items:flex-start;
+  transition:var(--transition); height:100%;
+}
+.equipment-sale-page .why-buy-card:hover { box-shadow:var(--shadow); transform:translateY(-3px); border-color:rgba(255, 77, 77,0.2); }
+.equipment-sale-page .wb-icon { width:50px; height:50px; flex-shrink:0; background:var(--light); border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--red); font-size:1.4rem; transition:var(--transition); }
+.equipment-sale-page .why-buy-card:hover .wb-icon { background:var(--red); color:white; }
+.equipment-sale-page .wb-text h6 { font-family:var(--font-head); font-weight:700; font-size:0.97rem; color:var(--navy); margin-bottom:5px; }
+.equipment-sale-page .wb-text p { color:var(--mid); font-size:0.85rem; margin:0; }
+
+/* Comparison table */
+.equipment-sale-page .compare-table { background:var(--white); border:1.5px solid var(--border); border-radius:16px; overflow:hidden; }
+.equipment-sale-page .compare-table table { margin:0; }
+.equipment-sale-page .compare-table thead th { background:var(--navy); color:white; font-family:var(--font-head); font-weight:700; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; padding:14px 18px; border:none; }
+.equipment-sale-page .compare-table tbody td { font-size:0.87rem; padding:12px 18px; vertical-align:middle; border-color:var(--border); }
+.equipment-sale-page .compare-table tbody tr:hover { background:var(--light); }
+.equipment-sale-page .compare-table .check { color:#16a34a; font-size:1.1rem; }
+.equipment-sale-page .compare-table .cross { color:#dc2626; font-size:1.1rem; }
+
+/* Source: equipment-sale.html inline attributes */
+.equipment-sale-page .text-red { color: var(--red) !important; }
+
+.equipment-sale-page .sale-hero-subtitle {
+  color: rgba(255,255,255,0.65);
+  max-width: 520px;
+  margin-top: 14px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.equipment-sale-page .sale-hero-stat-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.equipment-sale-page .sale-hero-stat-num {
+  font-family: var(--font-head);
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+}
+
+.equipment-sale-page .sale-hero-stat-label {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.equipment-sale-page .sale-category-sticky {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+  position: sticky;
+  top: 90px;
+  z-index: 900;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.equipment-sale-page .sale-filter-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 0;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.equipment-sale-page .sale-filter-option-bordered { border-bottom: 1px solid var(--border); }
+
+.equipment-sale-page .sale-filter-input {
+  accent-color: var(--red);
+  width: 15px;
+  height: 15px;
+}
+
+.equipment-sale-page .sale-sidebar-help-text {
+  font-size: 0.84rem;
+  color: var(--mid);
+  margin-bottom: 14px;
+}
+
+.equipment-sale-page .sale-sidebar-call-btn {
+  font-size: 0.82rem;
+  padding: 10px 14px;
+}
+
+.equipment-sale-page .sale-rental-callout {
+  background: linear-gradient(105deg,var(--light),#eef2ff);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.equipment-sale-page .sale-rental-callout-copy {
+  flex: 1;
+  min-width: 200px;
+}
+
+.equipment-sale-page .sale-rental-callout-title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+.equipment-sale-page .sale-rental-callout-text {
+  font-size: 0.84rem;
+  color: var(--mid);
+}
+
+.equipment-sale-page .sale-rental-callout-link { white-space: nowrap; }
+.equipment-sale-page .sale-savings-cell { color: #16a34a; font-weight: 600; }
+.equipment-sale-page .footer-policy-link { color: rgba(255,255,255,0.35); }
+.equipment-sale-page .footer-policy-link:hover { color: var(--white); }
+/* ===== Surgical Page Styles (migrated from surgical.html) ===== */
+.surgical-page .surgical-hero-subtitle {
+  color: rgba(255,255,255,0.65);
+  max-width: 490px;
+  margin-top: 14px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.surgical-page .surgical-stat-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px;
+  padding: 22px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.surgical-page .surgical-stat-icon {
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 77, 77,0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff9b9b;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.surgical-page .surgical-stat-number {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+}
+
+.surgical-page .surgical-stat-label {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 3px;
+}
+
+.surgical-page .surgical-specialties {
+  background: var(--light);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+
+.surgical-page .surgical-category-sticky {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+  position: sticky;
+  top: 90px;
+  z-index: 900;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.surgical-page .surgical-ot-card {
+  background: linear-gradient(105deg,var(--navy-dark),var(--navy));
+  border-radius: 20px;
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.surgical-page .surgical-ot-orb {
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle,rgba(255, 77, 77,0.22) 0%,transparent 65%);
+  pointer-events: none;
+}
+
+.surgical-page .surgical-ot-label { color: #ff9b9b; }
+
+.surgical-page .surgical-ot-title {
+  font-family: var(--font-head);
+  font-size: clamp(1.7rem,3.5vw,2.4rem);
+  font-weight: 800;
+  color: white;
+  margin-bottom: 14px;
+}
+
+.surgical-page .surgical-ot-copy {
+  color: rgba(255,255,255,0.68);
+  font-size: 0.97rem;
+  max-width: 480px;
+  margin-bottom: 16px;
+}
+
+.surgical-page .surgical-ot-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.70);
+  font-size: 0.85rem;
+}
+
+.surgical-page .surgical-ot-check { color: var(--red); }
+    .surgical-page .cat-tab-bar { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:0; }
+    .surgical-page .cat-tab { display:inline-flex; align-items:center; gap:7px; font-family:var(--font-head); font-size:0.83rem; font-weight:600; padding:8px 18px; border-radius:50px; border:1.5px solid var(--border); background:var(--white); color:var(--navy); cursor:pointer; transition:var(--transition); text-decoration:none; white-space:nowrap; }
+    .surgical-page .cat-tab:hover, .surgical-page .cat-tab.active { background:var(--navy); border-color:var(--navy); color:var(--white); }
+
+    .surgical-page .cat-section { margin-bottom:60px; scroll-margin-top:130px; }
+    .surgical-page .cat-section-header { display:flex; align-items:center; gap:14px; margin-bottom:26px; padding-bottom:14px; border-bottom:2px solid var(--border); }
+    .surgical-page .cat-icon { width:46px; height:46px; background:var(--red); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-size:1.3rem; flex-shrink:0; }
+    .surgical-page .cat-section-header h3 { font-family:var(--font-head); font-size:1.3rem; font-weight:800; color:var(--navy); margin:0; }
+    .surgical-page .cat-count { margin-left:auto; background:var(--light); color:var(--mid); font-family:var(--font-head); font-size:0.75rem; font-weight:700; padding:3px 13px; border-radius:50px; white-space:nowrap; }
+
+    /* Horizontal instrument card */
+    .surgical-page .surg-card { background:var(--white); border:1.5px solid var(--border); border-radius:14px; display:flex; overflow:hidden; transition:var(--transition); height:100%; }
+    .surgical-page .surg-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-4px); border-color:rgba(68, 102, 204,0.12); }
+    .surgical-page .surg-card-img { width:130px; flex-shrink:0; position:relative; overflow:hidden; }
+    .surgical-page .surg-card-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; display:block; }
+    .surgical-page .surg-card:hover .surg-card-img img { transform:scale(1.08); }
+    .surgical-page .surg-img-tag { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(68, 102, 204,0.85)); padding:20px 8px 6px; font-family:var(--font-head); font-weight:700; font-size:0.62rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.85); text-align:center; }
+    .surgical-page .surg-card-body { padding:16px 18px; flex:1; display:flex; flex-direction:column; justify-content:space-between; }
+    .surgical-page .surg-card-body h5 { font-family:var(--font-head); font-size:0.95rem; font-weight:700; color:var(--navy); margin-bottom:5px; }
+    .surgical-page .surg-card-body p { color:var(--mid); font-size:0.81rem; line-height:1.5; margin-bottom:10px; flex:1; }
+    .surgical-page .surg-tags { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:10px; }
+    .surgical-page .surg-tag { font-family:var(--font-head); font-size:0.65rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; padding:2px 9px; border-radius:50px; background:var(--light); color:var(--navy); }
+    .surgical-page .surg-tag.red { background:rgba(255, 77, 77,0.10); color:var(--red); }
+    .surgical-page .surg-footer { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+
+    /* Grid card */
+    .surgical-page .surg-grid-card { background:var(--white); border:1.5px solid var(--border); border-radius:14px; overflow:hidden; height:100%; display:flex; flex-direction:column; transition:var(--transition); }
+    .surgical-page .surg-grid-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-5px); border-color:rgba(68, 102, 204,0.12); }
+    .surgical-page .sgc-img { height:160px; overflow:hidden; position:relative; }
+    .surgical-page .sgc-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; display:block; }
+    .surgical-page .surg-grid-card:hover .sgc-img img { transform:scale(1.06); }
+    .surgical-page .sgc-badge { position:absolute; top:10px; left:10px; background:var(--navy); color:white; font-family:var(--font-head); font-weight:700; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; padding:3px 10px; border-radius:50px; }
+    .surgical-page .sgc-body { padding:15px 16px 16px; flex:1; display:flex; flex-direction:column; }
+    .surgical-page .sgc-body h5 { font-family:var(--font-head); font-size:0.92rem; font-weight:700; color:var(--navy); margin-bottom:6px; }
+    .surgical-page .sgc-body p { color:var(--mid); font-size:0.80rem; line-height:1.5; margin-bottom:12px; flex:1; }
+
+    /* Buttons */
+    .surgical-page .btn-surg-enq { display:inline-flex; align-items:center; gap:5px; background:var(--red); color:white; font-family:var(--font-head); font-weight:700; font-size:0.72rem; padding:6px 13px; border-radius:var(--radius); border:none; cursor:pointer; transition:var(--transition); text-decoration:none; }
+    .surgical-page .btn-surg-enq:hover { background:var(--red-dark); color:white; transform:translateY(-1px); }
+    .surgical-page .btn-surg-spec { display:inline-flex; align-items:center; gap:5px; background:transparent; color:var(--navy); font-family:var(--font-head); font-weight:700; font-size:0.72rem; padding:6px 13px; border-radius:var(--radius); border:1.5px solid var(--border); cursor:pointer; transition:var(--transition); text-decoration:none; }
+    .surgical-page .btn-surg-spec:hover { border-color:var(--navy); background:var(--light); }
+
+    /* Sidebar */
+    .surgical-page .sticky-sidebar { position:sticky; top:88px; }
+    .surgical-page .sidebar-box { background:var(--white); border:1.5px solid var(--border); border-radius:16px; padding:24px 20px; margin-bottom:18px; }
+    .surgical-page .sb-title { font-family:var(--font-head); font-weight:800; font-size:0.78rem; letter-spacing:0.10em; text-transform:uppercase; color:var(--navy); margin-bottom:14px; padding-bottom:10px; border-bottom:2px solid var(--border); }
+    .surgical-page .cat-nav-link { display:flex; align-items:center; gap:9px; padding:8px 0; font-size:0.86rem; color:var(--dark); border-bottom:1px solid var(--border); text-decoration:none; transition:var(--transition); font-weight:500; }
+    .surgical-page .cat-nav-link:last-child { border-bottom:none; }
+    .surgical-page .cat-nav-link i { color:var(--red); font-size:0.95rem; width:18px; }
+    .surgical-page .cat-nav-link:hover { color:var(--red); padding-left:4px; }
+    .surgical-page .cn-count { margin-left:auto; font-size:0.72rem; color:var(--mid); background:var(--light); padding:1px 8px; border-radius:50px; }
+
+    .surgical-page .enquiry-box { background:var(--navy); border-radius:16px; padding:24px 20px; }
+    .surgical-page .eq-title { font-family:var(--font-head); font-weight:800; font-size:1.05rem; color:white; margin-bottom:3px; }
+    .surgical-page .eq-sub { font-size:0.80rem; color:rgba(255,255,255,0.50); margin-bottom:16px; }
+    .surgical-page .enquiry-box .form-label { color:rgba(255,255,255,0.68); font-size:0.76rem; margin-bottom:3px; }
+    .surgical-page .enquiry-box .form-control, .surgical-page .enquiry-box .form-select { background:rgba(255,255,255,0.09); border-color:rgba(255,255,255,0.18); color:white; font-size:0.83rem; padding:8px 12px; }
+    .surgical-page .enquiry-box .form-control::placeholder { color:rgba(255,255,255,0.35); }
+    .surgical-page .enquiry-box .form-control:focus, .surgical-page .enquiry-box .form-select:focus { background:rgba(255,255,255,0.14); border-color:rgba(255,255,255,0.38); box-shadow:none; color:white; }
+    .surgical-page .enquiry-box .form-select option { background:var(--navy-dark); }
+
+    /* Specialties strip */
+    .surgical-page .specialty-pill { display:inline-flex; align-items:center; gap:8px; background:var(--white); border:1.5px solid var(--border); border-radius:50px; padding:9px 18px; font-family:var(--font-head); font-size:0.82rem; font-weight:600; color:var(--navy); transition:var(--transition); cursor:default; }
+    .surgical-page .specialty-pill i { color:var(--red); font-size:0.95rem; }
+    .surgical-page .specialty-pill:hover { border-color:var(--red); color:var(--red); }
+
+    /* QA sidebar items */
+    .surgical-page .qa-item { display:flex; align-items:center; gap:13px; padding:14px 0; border-bottom:1px solid var(--border); }
+    .surgical-page .qa-item:last-child { border-bottom:none; padding-bottom:0; }
+    .surgical-page .qa-icon { width:40px; height:40px; flex-shrink:0; background:var(--light); border-radius:9px; display:flex; align-items:center; justify-content:center; color:var(--red); font-size:1.15rem; transition:var(--transition); }
+    .surgical-page .qa-item:hover .qa-icon { background:var(--red); color:white; }
+    .surgical-page .qa-item h6 { font-family:var(--font-head); font-weight:700; font-size:0.88rem; color:var(--navy); margin-bottom:1px; }
+    .surgical-page .qa-item p { font-size:0.76rem; color:var(--mid); margin:0; }
+/* ===== Contact Page Styles (migrated from contact.html) ===== */
+.contact-page .contact-page-hero { padding: 80px 0 60px; }
+
+.contact-page .contact-hero-subtitle {
+  color: rgba(255,255,255,0.65);
+  max-width: 500px;
+  margin-top: 14px;
+  font-size: 1rem;
+  line-height: 1.80;
+}
+
+.contact-page .quick-chip-static { cursor: default; }
+
+.contact-page .contact-submit-btn {
+  font-size: 1rem;
+  padding: 14px 36px;
+}
+
+.contact-page .contact-response-note {
+  font-size: 0.82rem;
+  color: var(--mid);
+  margin-left: 16px;
+}
+
+.contact-page .contact-response-icon { color: var(--red); }
+
+.contact-page .contact-info-note {
+  font-size: 0.80rem;
+  color: rgba(255,255,255,0.45);
+}
+
+.contact-page .contact-info-note-block {
+  display: block;
+  margin-top: 2px;
+}
+
+.contact-page .contact-ci-row-last { margin-bottom: 0; }
+
+.contact-page .contact-visit-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-page .contact-visit-icon {
+  color: var(--red);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contact-page .contact-visit-title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--navy);
+}
+
+.contact-page .contact-visit-copy {
+  font-size: 0.80rem;
+  color: var(--mid);
+}
+
+.contact-page .contact-inherit-link { color: inherit; }
+
+.contact-page .contact-faq-subtitle {
+  color: var(--mid);
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+}
+/* â”€â”€ Contact form card â”€â”€ */
+    .contact-page .contact-form-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 44px 42px;
+      box-shadow: var(--shadow);
+    }
+     @media (max-width: 575px) { .contact-page .contact-form-card { padding: 28px 20px; } }
+
+    .contact-page .form-section-title {
+      font-family: var(--font-head);
+      font-size: 1.45rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 6px;
+    }
+    .contact-page .form-section-sub {
+      font-size: 0.90rem; color: var(--mid); margin-bottom: 28px;
+    }
+
+    .contact-page .form-label {
+      font-family: var(--font-head);
+      font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--navy); margin-bottom: 6px;
+    }
+
+    .contact-page .form-control, .contact-page .form-select {
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 15px;
+      font-size: 0.92rem;
+      color: var(--dark);
+      transition: var(--transition);
+      background: var(--white);
+    }
+    .contact-page .form-control:focus, .contact-page .form-select:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(68, 102, 204,0.09);
+      outline: none;
+    }
+    .contact-page .form-control::placeholder { color: rgba(107,114,128,0.55); }
+
+    .contact-page textarea.form-control { resize: vertical; min-height: 130px; }
+
+    .contact-page .form-check-input:checked { background-color: var(--red); border-color: var(--red); }
+    .contact-page .form-check-label { font-size: 0.87rem; color: var(--mid); }
+
+    /* â”€â”€ Info card (navy) â”€â”€ */
+    .contact-page .info-card {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 40px 34px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-page .info-card::before {
+      content: '';
+      position: absolute;
+      right: -60px; bottom: -60px;
+      width: 260px; height: 260px;
+      background: radial-gradient(circle, rgba(255, 77, 77,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-page .info-card-title {
+      font-family: var(--font-head);
+      font-size: 1.35rem; font-weight: 800;
+      color: white; margin-bottom: 6px;
+    }
+    .contact-page .info-card-sub {
+      font-size: 0.87rem; color: rgba(255,255,255,0.55);
+      margin-bottom: 32px; line-height: 1.65;
+    }
+
+    .contact-page .ci-row {
+      display: flex; align-items: flex-start; gap: 16px;
+      margin-bottom: 24px;
+    }
+    .contact-page .ci-icon {
+      width: 46px; height: 46px; flex-shrink: 0;
+      background: rgba(255, 77, 77,0.18);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: #ff9b9b; font-size: 1.2rem;
+    }
+    .contact-page .ci-label {
+      font-family: var(--font-head);
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.45); margin-bottom: 3px;
+    }
+    .contact-page .ci-value {
+      color: rgba(255,255,255,0.88);
+      font-size: 0.90rem; line-height: 1.55;
+    }
+    .contact-page .ci-value a { color: rgba(255,255,255,0.88); transition: color var(--transition); }
+    .contact-page .ci-value a:hover { color: white; }
+
+    .contact-page .info-divider {
+      border-color: rgba(255,255,255,0.10);
+      margin: 28px 0;
+    }
+
+    .contact-page .social-title {
+      font-family: var(--font-head);
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.45); margin-bottom: 14px;
+    }
+    .contact-page .social-links-lg { display: flex; gap: 10px; flex-wrap: wrap; }
+    .contact-page .social-links-lg a {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      color: rgba(255,255,255,0.70);
+      font-family: var(--font-head); font-size: 0.78rem; font-weight: 600;
+      transition: var(--transition); text-decoration: none;
+    }
+    .contact-page .social-links-lg a:hover { background: var(--red); border-color: var(--red); color: white; transform: translateY(-2px); }
+
+    /* â”€â”€ Map placeholder â”€â”€ */
+    .contact-page .map-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1.5px solid var(--border);
+      box-shadow: var(--shadow);
+      height: 380px;
+      position: relative;
+      background: var(--light);
+    }
+    .contact-page .map-wrap iframe {
+      width: 100%; height: 100%; border: none; display: block;
+    }
+    .contact-page .map-overlay-badge {
+      position: absolute;
+      top: 16px; left: 16px;
+      background: var(--white);
+      border-radius: 10px;
+      padding: 10px 16px;
+      box-shadow: var(--shadow);
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-head); font-size: 0.80rem; font-weight: 700;
+      color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .contact-page .map-overlay-badge i { color: var(--red); font-size: 1.1rem; }
+
+    /* â”€â”€ Quick contact chips â”€â”€ */
+    .contact-page .quick-chip {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 50px; padding: 10px 20px;
+      font-family: var(--font-head); font-size: 0.84rem; font-weight: 600;
+      color: var(--navy); text-decoration: none;
+      transition: var(--transition);
+    }
+    .contact-page .quick-chip i { color: var(--red); font-size: 1.1rem; }
+    .contact-page .quick-chip:hover { background: var(--navy); border-color: var(--navy); color: white; transform: translateY(-2px); box-shadow: var(--shadow); }
+    .contact-page .quick-chip:hover i { color: white; }
+
+    /* â”€â”€ FAQ â”€â”€ */
+    .contact-page .faq-item {
+      border: 1.5px solid var(--border);
+      border-radius: 12px; overflow: hidden;
+      margin-bottom: 12px; transition: var(--transition);
+    }
+    .contact-page .faq-item:hover { border-color: rgba(68, 102, 204,0.2); }
+
+    .contact-page .faq-btn {
+      width: 100%; text-align: left;
+      background: var(--white); border: none;
+      padding: 18px 22px; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px;
+      font-family: var(--font-head); font-size: 0.97rem; font-weight: 700;
+      color: var(--navy); transition: var(--transition);
+    }
+    .contact-page .faq-btn:hover { background: var(--light); }
+    .contact-page .faq-btn[aria-expanded="true"] { background: var(--navy); color: white; }
+    .contact-page .faq-btn[aria-expanded="true"] .faq-icon { transform: rotate(45deg); background: rgba(255,255,255,0.15); color: white; }
+
+    .contact-page .faq-icon {
+      width: 30px; height: 30px; flex-shrink: 0;
+      background: var(--light); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--red); font-size: 1.1rem;
+      transition: transform 0.3s ease, background var(--transition);
+    }
+
+    .contact-page .faq-body {
+      padding: 0 22px;
+      font-size: 0.90rem; color: var(--mid);
+      line-height: 1.70;
+    }
+    .contact-page .faq-body.collapse.show, .contact-page .faq-body.collapsing {
+      padding: 16px 22px 20px;
+    }
+
+    /* â”€â”€ Branch card â”€â”€ */
+    .contact-page .branch-card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 16px; padding: 26px 24px;
+      transition: var(--transition); height: 100%;
+    }
+    .contact-page .branch-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); border-color: rgba(68, 102, 204,0.18); }
+    .contact-page .branch-card .bc-city {
+      font-family: var(--font-head); font-size: 1.05rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 4px;
+    }
+    .contact-page .branch-card .bc-type {
+      font-family: var(--font-head); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.10em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 16px; display: block;
+    }
+    .contact-page .branch-card .bc-row {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.85rem; color: var(--mid);
+      margin-bottom: 10px;
+    }
+    .contact-page .branch-card .bc-row i { color: var(--red); flex-shrink: 0; margin-top: 2px; }
+    .contact-page .branch-card .bc-row:last-child { margin-bottom: 0; }
+
+/* ============================================
+   FINAL RESPONSIVE OVERRIDES & POLISH
+   ============================================ */
+
+/* --- Global Background Fixes --- */
+.hero, .page-banner, .page-hero {
+    background-size: cover !important;
+}
+
+/* --- Navigation & Category Bars --- */
+@media (max-width: 991.98px) {
+    .cat-tab-bar {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding: 5px 0 15px !important;
+        scrollbar-width: none; /* Firefox */
+    }
+    .cat-tab-bar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
+    }
+    .cat-tab {
+        flex: 0 0 auto !important;
+    }
+    
+    /* Adjust sticky position for mobile if navbar height changes */
+    .rent-category-sticky, .sale-category-sticky, .surgical-category-sticky {
+        top: 70px !important; 
+    }
+    
+    .navbar-xss .navbar-brand img {
+        height: 45px !important;
+    }
+}
+
+/* --- Hero & Banners --- */
+@media (max-width: 767.98px) {
+    .hero {
+        min-height: 300px !important;
+        padding: 2rem 0 !important;
+    }
+    .page-banner, .page-hero {
+        min-height: 250px !important;
+        padding: 3rem 0 !important;
+    }
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+    .section {
+        padding: 3rem 0 !important;
+    }
+    .section-title h2 {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* --- Card Adjustments --- */
+@media (max-width: 575.98px) {
+    /* Surgical Cards Stacking */
+    .surgical-page .surg-card {
+        flex-direction: column !important;
+    }
+    .surgical-page .surg-card-img {
+        width: 100% !important;
+        height: 200px !important;
+    }
+    
+    /* Product / Sale Cards */
+    .rent-card, .sale-card, .equipment-card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Trust Strip */
+    .trust-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem !important;
+    }
+    
+    /* Footer */
+    .footer {
+        text-align: center;
+    }
+    .footer h6::after {
+        margin: 0.5rem auto 0;
+    }
+    .footer-contact {
+        justify-content: center;
+    }
+}
+
+/* --- Table Responsiveness --- */
+.table-responsive-xss {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* --- Miscellaneous --- */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sticky-sidebar {
+    top: 100px !important;
+}
+
+/* Fix for overlapping sticky elements */
+.navbar-xss {
+    z-index: 1050 !important;
+}
+.rent-category-sticky, .sale-category-sticky, .surgical-category-sticky {
+    z-index: 1040 !important;
+}
+
