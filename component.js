@@ -34,6 +34,7 @@
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link" href="surgical.html">Surgical</a></li>
+        <li class="nav-item"><a class="nav-link" href="home-nursing.html">Home Nursing</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
           <a href="contact.html" class="btn btn-quote">Get a Quote</a>
@@ -62,6 +63,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="surgical.html">Surgical</a>
+        <a href="home-nursing.html">Home Nursing</a>
         <a href="contact.html">Contact</a>
       </div>
       <div class="col-lg-3 col-md-6 col-6">

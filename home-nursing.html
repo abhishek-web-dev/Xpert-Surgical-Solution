@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Nursing Services — Xpert Surgical Solution</title>
+  <meta name="description" content="Professional Home Nursing Services by Xpert Surgical Solution — ICU Setup, Critical Care, Elder Care, Paralysis Care, Coma Care & more. Trained nurses, 24/7 availability, pan-India.">
+  <link rel="icon" type="image/png" href="./img/Logo_Black.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    /* ════════════════════════════════
+       HERO — animated gradient bg
+    ════════════════════════════════ */
+    .nursing-hero {
+      background: linear-gradient(120deg, #0f1e45 0%, var(--navy) 50%, #1a3a6e 100%);
+      padding: 90px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    .nursing-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .nursing-hero::after {
+      content: '';
+      position: absolute;
+      right: -100px; top: -100px;
+      width: 550px; height: 550px;
+      background: radial-gradient(circle, rgba(215,38,61,0.16) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* ════════════════════════════════
+       TRUST TICKER
+    ════════════════════════════════ */
+    .trust-ticker {
+      background: var(--red);
+      padding: 13px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-inner {
+      display: inline-flex;
+      gap: 0;
+      animation: ticker 28s linear infinite;
+    }
+    .ticker-inner span {
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: white;
+      padding: 0 28px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ticker-inner span i { opacity: 0.70; }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ════════════════════════════════
+       SERVICE CARDS (12 items)
+    ════════════════════════════════ */
+    
+
+    .ns-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+    .ns-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--red);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+    .ns-card:hover {
+      box-shadow: 0 12px 40px rgba(27,46,94,0.14);
+      transform: translateY(-7px);
+      border-color: transparent;
+    }
+    .ns-card:hover::before { transform: scaleX(1); }
+
+    .ns-img-wrap {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    .ns-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .ns-card:hover .ns-img-wrap img { transform: scale(1.07); }
+
+    /* Overlay gradient on image */
+    .ns-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(17,30,64,0.65) 100%);
+    }
+
+    /* Service number badge */
+    .ns-num {
+      position: absolute;
+      top: 14px; left: 14px;
+      width: 34px; height: 34px;
+      background: var(--red);
+      color: white;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-weight: 800; font-size: 0.85rem;
+      z-index: 2;
+      box-shadow: 0 3px 12px rgba(215,38,61,0.40);
+    }
+
+    /* Icon on image bottom */
+    .ns-icon-badge {
+      position: absolute;
+      bottom: 14px; right: 14px;
+      width: 42px; height: 42px;
+      background: white;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      color: var(--red);
+      z-index: 2;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.20);
+      transition: var(--transition);
+    }
+    .ns-card:hover .ns-icon-badge {
+      background: var(--red);
+      color: white;
+    }
+
+    .ns-body {
+      padding: 22px 22px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .ns-body h4 {
+      font-family: var(--font-head);
+      font-size: 1.08rem; font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .ns-body p {
+      color: var(--mid);
+      font-size: 0.85rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .ns-features {
+      list-style: none;
+      padding: 0; margin: 0 0 18px;
+    }
+    .ns-features li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 0.81rem; color: var(--dark);
+      padding: 4px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .ns-features li:last-child { border-bottom: none; }
+    .ns-features li i { color: var(--red); flex-shrink: 0; margin-top: 2px; }
+
+    .ns-card-footer {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap; gap: 8px;
+    }
+    .avail-tag {
+      font-family: var(--font-head); font-size: 0.70rem;
+      font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex; align-items: center; gap: 5px;
+      color: #16a34a;
+    }
+    .avail-tag::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: #16a34a;
+      border-radius: 50%;
+      display: inline-block;
+      animation: blink 1.6s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .btn-book {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--navy); color: white;
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 0.76rem; letter-spacing: 0.04em;
+      padding: 8px 16px; border-radius: var(--radius);
+      text-decoration: none; transition: var(--transition);
+      border: none; cursor: pointer;
+    }
+    .btn-book:hover {
+      background: var(--red); color: white;
+      transform: translateY(-1px);
+    }
+
+    /* ════════════════════════════════
+       WHY CHOOSE — Feature strip
+    ════════════════════════════════ */
+    .why-strip {
+      background: var(--navy);
+      padding: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .why-strip::before {
+      content: '';
+      position: absolute;
+      left: -80px; top: -80px;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(215,38,61,0.15) 0%, transparent 65%);
+    }
+    .why-item {
+      display: flex; gap: 18px; align-items: flex-start;
+    }
+    .wi-icon {
+      width: 52px; height: 52px; flex-shrink: 0;
+      background: rgba(215,38,61,0.18);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: #ff8a96; font-size: 1.4rem;
+      transition: var(--transition);
+    }
+    .why-item:hover .wi-icon {
+      background: var(--red); color: white;
+    }
+    .wi-text h6 {
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 0.97rem; color: white; margin-bottom: 4px;
+    }
+    .wi-text p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.84rem; margin: 0;
+    }
+
+    /* ════════════════════════════════
+       PROCESS STEPS
+    ════════════════════════════════ */
+    .process-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 30px 24px;
+      height: 100%;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+    }
+    .process-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+    .pc-step-num {
+      width: 48px; height: 48px;
+      background: var(--red);
+      color: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-weight: 900; font-size: 1.1rem;
+      margin: 0 auto 18px;
+      box-shadow: 0 6px 18px rgba(215,38,61,0.30);
+    }
+    .process-card h6 {
+      font-family: var(--font-head);
+      font-size: 1rem; font-weight: 700;
+      color: var(--navy); margin-bottom: 8px;
+    }
+    .process-card p {
+      color: var(--mid); font-size: 0.84rem; margin: 0;
+    }
+    /* Connector arrow */
+    .pc-arrow {
+      display: flex; align-items: center; justify-content: center;
+      color: var(--border); font-size: 1.4rem;
+      padding-top: 28px;
+    }
+    @media (max-width: 991px) { .pc-arrow { display: none; } }
+
+    /* ════════════════════════════════
+       CARE TYPES TABLE
+    ════════════════════════════════ */
+    .care-table-wrap {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .care-table-wrap table { margin: 0; }
+    .care-table-wrap thead th {
+      background: var(--navy); color: white;
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 0.82rem; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 20px; border: none;
+    }
+    .care-table-wrap tbody td {
+      padding: 13px 20px;
+      font-size: 0.88rem; vertical-align: middle;
+      border-color: var(--border);
+    }
+    .care-table-wrap tbody tr:hover { background: var(--light); }
+    .care-table-wrap .check { color: #16a34a; font-size: 1.05rem; }
+    .care-type-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--font-head); font-weight: 700;
+      font-size: 0.80rem; letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 4px 12px; border-radius: 50px;
+      background: var(--light); color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    /* ════════════════════════════════
+       BOOKING FORM SECTION
+    ════════════════════════════════ */
+    .booking-section {
+      background: linear-gradient(120deg, #0f1e45, var(--navy));
+      position: relative; overflow: hidden;
+      padding: 90px 0;
+    }
+    .booking-section::after {
+      content: '';
+      position: absolute;
+      right: -80px; bottom: -80px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(215,38,61,0.18) 0%, transparent 65%);
+    }
+    .booking-form-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px 38px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      position: relative; z-index: 2;
+    }
+    @media (max-width: 575px) { .booking-form-card { padding: 26px 18px; } }
+
+    .booking-form-card .form-label {
+      font-family: var(--font-head);
+      font-size: 0.76rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--navy); margin-bottom: 5px;
+    }
+    .booking-form-card .form-control,
+    .booking-form-card .form-select {
+      border: 1.5px solid var(--border);
+      border-radius: 10px; padding: 10px 14px;
+      font-size: 0.90rem; color: var(--dark);
+      transition: var(--transition);
+    }
+    .booking-form-card .form-control:focus,
+    .booking-form-card .form-select:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(215,38,61,0.10);
+    }
+    .booking-form-card .form-control::placeholder { color: rgba(107,114,128,0.50); }
+
+    /* ════════════════════════════════
+       TESTIMONIALS
+    ════════════════════════════════ */
+    .ns-testimonial {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 30px 26px;
+      height: 100%;
+      transition: var(--transition);
+      position: relative;
+    }
+    .ns-testimonial:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+    .nt-quote {
+      font-size: 4rem; line-height: 1;
+      color: var(--red); opacity: 0.12;
+      position: absolute; top: 16px; left: 22px;
+      font-family: Georgia, serif;
+    }
+    .nt-stars { color: #f59e0b; font-size: 0.88rem; letter-spacing: 2px; margin-bottom: 12px; }
+    .ns-testimonial p {
+      color: var(--mid); font-size: 0.90rem;
+      font-style: italic; margin-bottom: 18px;
+      position: relative; z-index: 1;
+    }
+    .nt-author { display: flex; align-items: center; gap: 12px; }
+    .nt-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--light);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-weight: 800;
+      color: var(--navy); font-size: 1rem; flex-shrink: 0;
+    }
+    .nt-author strong {
+      display: block; font-family: var(--font-head);
+      font-size: 0.92rem; font-weight: 700; color: var(--navy);
+    }
+    .nt-author span { font-size: 0.78rem; color: var(--mid); }
+
+    /* ════════════════════════════════
+       STATS BAR
+    ════════════════════════════════ */
+    .stats-bar {
+      background: var(--light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 0;
+    }
+    .sb-item { text-align: center; }
+    .sb-num {
+      font-family: var(--font-head); font-size: 2.4rem;
+      font-weight: 900; color: var(--navy); line-height: 1;
+    }
+    .sb-num span { color: var(--red); }
+    .sb-lbl {
+      font-family: var(--font-head); font-size: 0.78rem;
+      font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--mid);
+      margin-top: 5px;
+    }
+
+    .home-nursing-page {
+      font-family: var(--font-body);
+      color: var(--dark);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .home-nursing-page .section-pad { padding: 90px 0; }
+    .home-nursing-page .bg-light-grey { background: var(--light); }
+    .home-nursing-page .section-label {
+      font-family: var(--font-head);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--red);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .home-nursing-page .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.13;
+      text-transform: uppercase;
+    }
+    .home-nursing-page .nursing-intro-content,
+    .home-nursing-page .nursing-intro-content .section-label,
+    .home-nursing-page .nursing-intro-content .section-title {
+      text-align: left !important;
+    }
+    .home-nursing-page .nursing-intro-content .section-title {
+      
+      font-size: clamp(2rem, 4.35vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: 0;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      max-width: 940px;
+      margin-bottom: 0;
+    }
+    .home-nursing-page .section-subtitle {
+      color: var(--mid);
+      font-size: 1.05rem;
+      max-width: 560px;
+    }
+    .home-nursing-page .divider-red {
+      width: 52px;
+      height: 4px;
+      background: var(--red);
+      border-radius: 3px;
+      margin: 18px 0 24px;
+    }
+    .home-nursing-page .btn-xpert,
+    .home-nursing-page .btn-navy,
+    .home-nursing-page .btn-xpert-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 11px 22px;
+      border-radius: var(--radius);
+      transition: var(--transition);
+      text-decoration: none;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .home-nursing-page .btn-xpert {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--white);
+    }
+    .home-nursing-page .btn-xpert:hover {
+      background: var(--red-dark);
+      border-color: var(--red-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 77, 77,0.30);
+    }
+    .home-nursing-page .btn-navy {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+    .home-nursing-page .btn-navy:hover {
+      background: var(--navy-dark);
+      border-color: var(--navy-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    .home-nursing-page .btn-xpert-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.35);
+    }
+    .home-nursing-page .btn-xpert-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--white);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    .home-nursing-page .page-hero-breadcrumb {
+      color: rgba(255,255,255,0.46);
+      font-size: 0.88rem;
+    }
+    .home-nursing-page .page-hero-breadcrumb a { color: rgba(255,255,255,0.6); }
+    .home-nursing-page .page-hero-breadcrumb a:hover { color: var(--white); }
+    .home-nursing-page .page-hero-breadcrumb .sep { margin: 0 8px; }
+    .home-nursing-page .page-hero-breadcrumb .current { color: var(--red); }
+    .home-nursing-page .cta-band {
+      background: linear-gradient(105deg, var(--navy-dark) 0%, var(--navy) 100%);
+      color: var(--white);
+      padding: 58px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .home-nursing-page .cta-band h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .home-nursing-page .cta-band p {
+      color: rgba(255,255,255,0.68);
+      margin: 0;
+      max-width: 580px;
+    }
+    @media (max-width: 767px) {
+      .home-nursing-page .section-pad { padding: 64px 0; }
+      .home-nursing-page .section-title { font-size: 1.8rem; }
+    }
+
+  </style>
+</head>
+<body class="home-nursing-page">
+
+<div class="site-header"></div>
+
+<!-- HERO -->
+<section class="position-relative">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(105deg, rgba(43, 67, 142, 0.2) 0%, rgba(68, 102, 204, 0.3) 45%, rgba(68, 102, 204, 0.1) 100%);"></div>
+  <img src="./img/Home-Nursing-Banner.jpg" alt="Medical Equipment on Rent" class="img-fluid w-100">
+</section>
+
+<!-- TRUST TICKER -->
+<div class="trust-ticker">
+  <div class="ticker-inner" aria-hidden="true">
+    <!-- Two copies for seamless loop -->
+    <span><i class="bi bi-patch-check-fill"></i> GNM & B.Sc Certified Nurses</span>
+    <span><i class="bi bi-shield-heart-fill"></i> Background Verified Staff</span>
+    <span><i class="bi bi-clock-fill"></i> 24/7 Availability</span>
+    <span><i class="bi bi-geo-alt-fill"></i> Pan-India Service</span>
+    <span><i class="bi bi-heart-pulse-fill"></i> Personalised Care Plans</span>
+    <span><i class="bi bi-telephone-fill"></i> Dedicated Care Coordinator</span>
+    <span><i class="bi bi-star-fill"></i> 4.9★ Patient Satisfaction</span>
+    <span><i class="bi bi-patch-check-fill"></i> GNM & B.Sc Certified Nurses</span>
+    <span><i class="bi bi-shield-heart-fill"></i> Background Verified Staff</span>
+    <span><i class="bi bi-clock-fill"></i> 24/7 Availability</span>
+    <span><i class="bi bi-geo-alt-fill"></i> Pan-India Service</span>
+    <span><i class="bi bi-heart-pulse-fill"></i> Personalised Care Plans</span>
+    <span><i class="bi bi-telephone-fill"></i> Dedicated Care Coordinator</span>
+    <span><i class="bi bi-star-fill"></i> 4.9★ Patient Satisfaction</span>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3"><div class="sb-item"><div class="sb-num">500<span>+</span></div><div class="sb-lbl">Patients Cared For</div></div></div>
+      <div class="col-6 col-lg-3"><div class="sb-item"><div class="sb-num">12<span>+</span></div><div class="sb-lbl">Specialised Services</div></div></div>
+      <div class="col-6 col-lg-3"><div class="sb-item"><div class="sb-num">4.9<span>★</span></div><div class="sb-lbl">Average Rating</div></div></div>
+      <div class="col-6 col-lg-3"><div class="sb-item"><div class="sb-num">24<span>/7</span></div><div class="sb-lbl">Support Available</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO SECTION -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <div style="position:relative;">
+          <img src="/img/Home-Nursing-Mid.png"
+            alt="Home Nursing Care"
+            style="width:100%;border-radius:20px;height:460px;object-fit:cover;box-shadow:var(--shadow-lg);">
+          <!-- Floating badge -->
+          <div style="position:absolute;bottom:-20px;right:-20px;background:var(--red);color:white;border-radius:16px;padding:20px 24px;text-align:center;box-shadow:0 8px 28px rgba(215,38,61,0.38);">
+            <div style="font-family:var(--font-head);font-size:2.2rem;font-weight:900;line-height:1;">12<span style="font-size:1.2rem;">+</span></div>
+            <div style="font-family:var(--font-head);font-size:0.75rem;font-weight:700;letter-spacing:0.10em;text-transform:uppercase;opacity:0.85;margin-top:4px;">Care<br>Services</div>
+          </div>
+          <!-- Top-left badge -->
+          <div style="position:absolute;top:20px;left:-18px;background:var(--white);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:1.2rem;"><i class="bi bi-people-fill"></i></div>
+            <div>
+              <div style="font-family:var(--font-head);font-weight:800;font-size:1rem;color:var(--navy);">500+</div>
+              <div style="font-size:0.75rem;color:var(--mid);">Happy Families</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 nursing-intro-content">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Personalised Home<br>Nursing<br>for Every Medical Need</h2>
+        <div class="divider-red"></div>
+        <p style="color:var(--mid);font-size:0.96rem;line-height:1.80;margin-bottom:18px;">
+          At <strong style="color:var(--navy);">Xpert Surgical Solution</strong>, we understand that recovery is best in the familiar comfort of home. Our Home Nursing Services bring qualified, compassionate nurses directly to your doorstep — eliminating unnecessary hospital visits while ensuring your loved ones receive continuous, professional medical care.
+        </p>
+        <p style="color:var(--mid);font-size:0.96rem;line-height:1.80;margin-bottom:28px;">
+          From post-surgical care to long-term management of chronic conditions, our trained nursing staff work closely with your treating physician to deliver a care plan that's truly personalised — because every patient is unique.
+        </p>
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6">
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--light);border-radius:10px;border:1px solid var(--border);">
+              <i class="bi bi-patch-check-fill" style="color:var(--red);font-size:1.2rem;"></i>
+              <span style="font-family:var(--font-head);font-weight:600;font-size:0.88rem;color:var(--navy);">GNM / B.Sc Certified Nurses</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--light);border-radius:10px;border:1px solid var(--border);">
+              <i class="bi bi-shield-check" style="color:var(--red);font-size:1.2rem;"></i>
+              <span style="font-family:var(--font-head);font-weight:600;font-size:0.88rem;color:var(--navy);">Background Verified Staff</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--light);border-radius:10px;border:1px solid var(--border);">
+              <i class="bi bi-clock-fill" style="color:var(--red);font-size:1.2rem;"></i>
+              <span style="font-family:var(--font-head);font-weight:600;font-size:0.88rem;color:var(--navy);">12-hr / 24-hr Shift Options</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--light);border-radius:10px;border:1px solid var(--border);">
+              <i class="bi bi-person-lines-fill" style="color:var(--red);font-size:1.2rem;"></i>
+              <span style="font-family:var(--font-head);font-weight:600;font-size:0.88rem;color:var(--navy);">Dedicated Care Coordinator</span>
+            </div>
+          </div>
+        </div>
+        <a href="#book" class="btn-xpert me-3"><i class="bi bi-calendar-check"></i> Book a Nurse</a>
+        <a href="contact.html" class="btn-navy"><i class="bi bi-chat-dots"></i> Get Custom Plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 12 SERVICES GRID ═══════════ -->
+<section class="section-pad bg-light-grey" id="services">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 text-center">
+        <span class="section-label">Our Specialisations</span>
+        <h2 class="section-title">12 Home Nursing Services<br>We Provide</h2>
+        <div class="divider-red mx-auto"></div>
+        <p class="section-subtitle mx-auto">Comprehensive care for every condition — delivered by trained nurses at your home, 24/7.</p>
+      </div>
+    </div>
+    <div class="row g-4 service-grid">
+
+      <!-- 1. ICU Setup -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/ICU-Setup-at-Home.jpg" alt="ICU Setup at Home">
+            <span class="ns-num">01</span>
+            <span class="ns-icon-badge"><i class="bi bi-hospital-fill"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>ICU Setup at Home</h4>
+            <p>Full hospital-grade ICU environment recreated at home — including monitors, ventilator, suction, infusion pumps and trained ICU-experienced nursing staff.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> ICU monitors & ventilator arranged</li>
+              <li><i class="bi bi-check-circle-fill"></i> 24/7 ICU-trained nurse</li>
+              <li><i class="bi bi-check-circle-fill"></i> Daily physician consultation support</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Medical Attendant -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Medical-Attendant.jpg" alt="Medical Attendant">
+            <span class="ns-num">02</span>
+            <span class="ns-icon-badge"><i class="bi bi-person-heart"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Medical Attendant</h4>
+            <p>Trained medical attendants who assist with personal hygiene, feeding, mobility support, medication reminders and general day-to-day patient assistance.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Personal hygiene & grooming</li>
+              <li><i class="bi bi-check-circle-fill"></i> Feeding & hydration support</li>
+              <li><i class="bi bi-check-circle-fill"></i> Medication reminder management</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Paralysis Patient Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Paralysis-Patient-Care.png" alt="Paralysis Patient Care">
+            <span class="ns-num">03</span>
+            <span class="ns-icon-badge"><i class="bi bi-person-wheelchair"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Paralysis Patient Care</h4>
+            <p>Specialised nursing care for hemiplegia, paraplegia and quadriplegia patients — focused on physiotherapy coordination, pressure sore prevention and rehabilitation support.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Pressure ulcer prevention & care</li>
+              <li><i class="bi bi-check-circle-fill"></i> Passive physiotherapy exercises</li>
+              <li><i class="bi bi-check-circle-fill"></i> Catheter & bowel management</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Accidental Patient Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Accidental-Patient-Care.png" alt="Accidental Patient Care">
+            <span class="ns-num">04</span>
+            <span class="ns-icon-badge"><i class="bi bi-bandaid-fill"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Accidental Patient Care</h4>
+            <p>Post-trauma nursing for accident victims — wound care, orthopaedic recovery support, dressing changes, vital monitoring and mobilisation assistance.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Wound dressing & care</li>
+              <li><i class="bi bi-check-circle-fill"></i> Orthopaedic recovery assistance</li>
+              <li><i class="bi bi-check-circle-fill"></i> Vital signs monitoring</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Coma Patient Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Coma-Patient-Care.png" alt="Coma Patient Care">
+            <span class="ns-num">05</span>
+            <span class="ns-icon-badge"><i class="bi bi-heart-pulse-fill"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Coma Patient Care</h4>
+            <p>Around-the-clock intensive care for unconscious or minimally conscious patients — including tube feeding, respiratory care, sensory stimulation and continuous monitoring.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Ryle's tube / PEG feeding</li>
+              <li><i class="bi bi-check-circle-fill"></i> Airway & respiratory management</li>
+              <li><i class="bi bi-check-circle-fill"></i> Sensory stimulation therapy</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Elder Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Elder-Care.png" alt="Elder Care">
+            <span class="ns-num">06</span>
+            <span class="ns-icon-badge"><i class="bi bi-people-fill"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Elder Care</h4>
+            <p>Compassionate, dignified care for senior citizens — covering daily assistance, chronic disease management, fall prevention, companionship and emotional support.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Daily living assistance</li>
+              <li><i class="bi bi-check-circle-fill"></i> Chronic disease management</li>
+              <li><i class="bi bi-check-circle-fill"></i> Companionship & mental wellness</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Critical Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Critical-Care.png" alt="Critical Care">
+            <span class="ns-num">07</span>
+            <span class="ns-icon-badge"><i class="bi bi-activity"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Critical Care</h4>
+            <p>High-dependency nursing for medically unstable patients post-ICU discharge — continuous monitoring, IV medications, ventilator weaning support and close family coordination.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Continuous vital monitoring</li>
+              <li><i class="bi bi-check-circle-fill"></i> IV fluid & medication management</li>
+              <li><i class="bi bi-check-circle-fill"></i> Ventilator weaning support</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Dementia Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Dementia-Care.png" alt="Dementia Care">
+            <span class="ns-num">08</span>
+            <span class="ns-icon-badge"><i class="bi bi-emoji-smile-fill"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Dementia Care</h4>
+            <p>Specialist care for Alzheimer's and dementia patients — creating a safe, structured home environment with memory stimulation, behavioural support and caregiver guidance.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Structured daily routine</li>
+              <li><i class="bi bi-check-circle-fill"></i> Cognitive & memory stimulation</li>
+              <li><i class="bi bi-check-circle-fill"></i> Safe wandering prevention</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Cardiac Patient Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Cardiac-Patient-Care.png" alt="Cardiac Patient Care">
+            <span class="ns-num">09</span>
+            <span class="ns-icon-badge"><i class="bi bi-heart-fill"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Cardiac Patient Care</h4>
+            <p>Post-cardiac surgery and heart failure nursing — ECG monitoring, medication adherence, diet management, fluid balance and emergency preparedness at home.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> ECG & cardiac monitoring</li>
+              <li><i class="bi bi-check-circle-fill"></i> Medication & diet management</li>
+              <li><i class="bi bi-check-circle-fill"></i> Fluid balance monitoring</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Trauma Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Trauma-Care.png" alt="Trauma Care">
+            <span class="ns-num">10</span>
+            <span class="ns-icon-badge"><i class="bi bi-shield-plus-fill"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Trauma Care</h4>
+            <p>Comprehensive post-trauma recovery nursing — covering surgical wound management, pain assessment, physiotherapy coordination and psychological recovery support.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Surgical wound & dressing care</li>
+              <li><i class="bi bi-check-circle-fill"></i> Pain assessment & management</li>
+              <li><i class="bi bi-check-circle-fill"></i> Physiotherapy coordination</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. Neuro Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Neuro-Care.png" alt="Neuro Care">
+            <span class="ns-num">11</span>
+            <span class="ns-icon-badge"><i class="bi bi-lightning-charge-fill"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Neuro Care</h4>
+            <p>Expert home nursing for stroke, Parkinson's, epilepsy and post-neurosurgery patients — seizure management, rehabilitation exercises and neurological symptom monitoring.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Seizure observation & first aid</li>
+              <li><i class="bi bi-check-circle-fill"></i> Neurological rehabilitation support</li>
+              <li><i class="bi bi-check-circle-fill"></i> Speech & swallowing assistance</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. Cancer Patient Care -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="ns-card">
+          <div class="ns-img-wrap">
+            <img src="/img/Cancer-Patient-Care.png" alt="Cancer Patient Care">
+            <span class="ns-num">12</span>
+            <span class="ns-icon-badge"><i class="bi bi-flower1"></i></span>
+          </div>
+          <div class="ns-body">
+            <h4>Cancer Patient Care</h4>
+            <p>Compassionate palliative and oncology nursing — chemotherapy side effect management, pain control, nutrition support, central line care and emotional support for families.</p>
+            <ul class="ns-features">
+              <li><i class="bi bi-check-circle-fill"></i> Chemo side-effect management</li>
+              <li><i class="bi bi-check-circle-fill"></i> Palliative pain management</li>
+              <li><i class="bi bi-check-circle-fill"></i> Nutritional & emotional support</li>
+            </ul>
+            <div class="ns-card-footer">
+              <span class="avail-tag">Available 24/7</span>
+              <a href="#book" class="btn-book"><i class="bi bi-calendar-check"></i> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- WHY CHOOSE US STRIP -->
+<section class="why-strip">
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 text-center">
+        <span style="font-family:var(--font-head);font-size:0.85rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:8px;">Why Choose Xpert Nursing</span>
+        <h2 style="font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);font-weight:900;color:white;letter-spacing:-0.02em;margin-bottom:0;">Your Loved Ones Deserve the Best</h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="why-item">
+          <div class="wi-icon"><i class="bi bi-patch-check-fill"></i></div>
+          <div class="wi-text">
+            <h6>Certified Nurses</h6>
+            <p>All nursing staff hold GNM / B.Sc Nursing degrees with a minimum of 2 years clinical experience.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="why-item">
+          <div class="wi-icon"><i class="bi bi-shield-fill-plus"></i></div>
+          <div class="wi-text">
+            <h6>Verified & Trusted</h6>
+            <p>Every nurse undergoes thorough police verification, medical fitness checks and identity validation.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="why-item">
+          <div class="wi-icon"><i class="bi bi-person-lines-fill"></i></div>
+          <div class="wi-text">
+            <h6>Personalised Care Plans</h6>
+            <p>We assess each patient's condition, medical history and physician instructions to create a bespoke care plan.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="why-item">
+          <div class="wi-icon"><i class="bi bi-clock-fill"></i></div>
+          <div class="wi-text">
+            <h6>24/7 Support</h6>
+            <p>Our care coordinators are available round-the-clock to resolve any concern within minutes — day or night.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="why-item">
+          <div class="wi-icon"><i class="bi bi-house-heart-fill"></i></div>
+          <div class="wi-text">
+            <h6>Comfort of Home</h6>
+            <p>Patients recover better in familiar surroundings — our nurses integrate seamlessly into your home environment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="why-item">
+          <div class="wi-icon"><i class="bi bi-currency-rupee"></i></div>
+          <div class="wi-text">
+            <h6>Transparent Pricing</h6>
+            <p>No hidden charges. Clear shift-based pricing with daily, weekly and monthly options to suit every budget.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="why-item">
+          <div class="wi-icon"><i class="bi bi-arrow-repeat"></i></div>
+          <div class="wi-text">
+            <h6>Nurse Replacement</h6>
+            <p>If you're not satisfied with any nurse, we replace them within 24 hours — guaranteed, no questions asked.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="why-item">
+          <div class="wi-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div class="wi-text">
+            <h6>Pan-India Service</h6>
+            <p>We provide home nursing in Delhi NCR, Mumbai, Bengaluru, Chennai, Hyderabad and 20+ other cities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 text-center">
+        <span class="section-label">Simple Process</span>
+        <h2 class="section-title">How to Book a Home Nurse</h2>
+        <div class="divider-red mx-auto"></div>
+        <p class="section-subtitle mx-auto">Get a trained nurse at your doorstep in as little as 4 hours — here's how it works.</p>
+      </div>
+    </div>
+    <div class="row align-items-center g-2">
+      <div class="col-6 col-md-3 col-lg">
+        <div class="process-card">
+          <div class="pc-step-num">1</div>
+          <h6>Share Requirement</h6>
+          <p>Call, WhatsApp or fill the booking form with patient details and care needed.</p>
+        </div>
+      </div>
+      <div class="col-md-auto pc-arrow d-none d-lg-flex"><i class="bi bi-chevron-right"></i></div>
+      <div class="col-6 col-md-3 col-lg">
+        <div class="process-card">
+          <div class="pc-step-num">2</div>
+          <h6>Care Assessment</h6>
+          <p>Our care coordinator reviews the case and matches the right nurse to patient needs.</p>
+        </div>
+      </div>
+      <div class="col-md-auto pc-arrow d-none d-lg-flex"><i class="bi bi-chevron-right"></i></div>
+      <div class="col-6 col-md-3 col-lg">
+        <div class="process-card">
+          <div class="pc-step-num">3</div>
+          <h6>Nurse Assigned</h6>
+          <p>A verified, qualified nurse is confirmed and you receive their profile with credentials.</p>
+        </div>
+      </div>
+      <div class="col-md-auto pc-arrow d-none d-lg-flex"><i class="bi bi-chevron-right"></i></div>
+      <div class="col-6 col-md-3 col-lg">
+        <div class="process-card">
+          <div class="pc-step-num">4</div>
+          <h6>Care Begins</h6>
+          <p>Nurse arrives on time, briefed by coordinator. Daily reports shared with family.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARE COMPARISON TABLE -->
+<section class="section-pad bg-light-grey">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 text-center">
+        <span class="section-label">Compare Options</span>
+        <h2 class="section-title">Choose Your Care Type</h2>
+        <div class="divider-red mx-auto"></div>
+        <p class="section-subtitle mx-auto">We offer flexible shift and care options to suit every patient and family need.</p>
+      </div>
+    </div>
+    <div class="care-table-wrap">
+      <table class="table table-bordered mb-0">
+        <thead>
+          <tr>
+            <th>Care Feature</th>
+            <th><i class="bi bi-sun me-1"></i> 12-Hour Day Shift</th>
+            <th><i class="bi bi-moon me-1"></i> 12-Hour Night Shift</th>
+            <th><i class="bi bi-clock-fill me-1"></i> 24-Hour Live-In</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Coverage Hours</strong></td>
+            <td>8 AM – 8 PM</td>
+            <td>8 PM – 8 AM</td>
+            <td>Full 24 Hours</td>
+          </tr>
+          <tr>
+            <td><strong>Vital Monitoring</strong></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+          </tr>
+          <tr>
+            <td><strong>Medication Administration</strong></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+          </tr>
+          <tr>
+            <td><strong>Emergency Response</strong></td>
+            <td>Daytime only</td>
+            <td>Night only</td>
+            <td><i class="bi bi-check-circle-fill check"></i> Always</td>
+          </tr>
+          <tr>
+            <td><strong>Feeding & Hygiene</strong></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+          </tr>
+          <tr>
+            <td><strong>Daily Report to Family</strong></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+            <td><i class="bi bi-check-circle-fill check"></i></td>
+          </tr>
+          <tr>
+            <td><strong>Best For</strong></td>
+            <td>Post-op recovery</td>
+            <td>Night monitoring needs</td>
+            <td>Critical / ICU-level care</td>
+          </tr>
+          <tr>
+            <td><strong>Pricing</strong></td>
+            <td>On Request</td>
+            <td>On Request</td>
+            <td><span style="color:var(--red);font-weight:700;">Best Value</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center mt-4">
+      <a href="#book" class="btn-xpert me-3"><i class="bi bi-calendar-check"></i> Book Your Nurse</a>
+      <a href="contact.html" class="btn-navy"><i class="bi bi-chat-dots"></i> Ask a Question</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 text-center">
+        <span class="section-label">What Families Say</span>
+        <h2 class="section-title">Real Experiences, Real Care</h2>
+        <div class="divider-red mx-auto"></div>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="ns-testimonial">
+          <div class="nt-quote">"</div>
+          <div class="nt-stars">★★★★★</div>
+          <p>The nurse assigned for my father's post-stroke care was incredibly professional and compassionate. She followed his care plan precisely and kept us informed every single day. Truly exceptional service.</p>
+          <div class="nt-author">
+            <div class="nt-avatar">RS</div>
+            <div>
+              <strong>Rahul Sharma</strong>
+              <span>Son of stroke patient, New Delhi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ns-testimonial">
+          <div class="nt-quote">"</div>
+          <div class="nt-stars">★★★★★</div>
+          <p>We needed ICU-level care at home for my mother after her bypass surgery. Xpert set up everything — monitors, equipment and a trained ICU nurse — within hours. It felt like a mini-hospital at home.</p>
+          <div class="nt-author">
+            <div class="nt-avatar">PM</div>
+            <div>
+              <strong>Priya Mehta</strong>
+              <span>Daughter of cardiac patient, Mumbai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ns-testimonial">
+          <div class="nt-quote">"</div>
+          <div class="nt-stars">★★★★★</div>
+          <p>My grandfather has dementia and the nurse assigned to him was specifically trained in dementia care. His daily routine improved dramatically and the family finally got some much-needed rest. Highly recommended.</p>
+          <div class="nt-author">
+            <div class="nt-avatar">AK</div>
+            <div>
+              <strong>Anjali Kapoor</strong>
+              <span>Granddaughter, Bengaluru</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking-section" id="book">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+
+      <!-- Left: Copy -->
+      <div class="col-lg-5 position-relative" style="z-index:2;">
+        <span style="font-family:var(--font-head);font-size:0.75rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(215,38,61,0.80);display:block;margin-bottom:10px;">Book a Nurse Today</span>
+        <h2 style="font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);font-weight:900;color:white;letter-spacing:-0.02em;line-height:1.1;margin-bottom:18px;">
+          Get a Trained Nurse<br>at Your Home in<br><span style="color:var(--red)">4–6 Hours</span>
+        </h2>
+        <p style="color:rgba(255,255,255,0.60);font-size:0.96rem;line-height:1.75;margin-bottom:32px;">
+          Fill the form, and our care coordinator will call you back within 30 minutes to confirm your booking and nurse assignment.
+        </p>
+        <div class="d-flex flex-column gap-3">
+          <div style="display:flex;align-items:center;gap:14px;color:rgba(255,255,255,0.75);">
+            <div style="width:38px;height:38px;background:rgba(215,38,61,0.20);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#ff8a96;font-size:1.1rem;flex-shrink:0;"><i class="bi bi-check-circle-fill"></i></div>
+            <span style="font-size:0.90rem;">No advance payment required to book</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;color:rgba(255,255,255,0.75);">
+            <div style="width:38px;height:38px;background:rgba(215,38,61,0.20);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#ff8a96;font-size:1.1rem;flex-shrink:0;"><i class="bi bi-check-circle-fill"></i></div>
+            <span style="font-size:0.90rem;">Nurse profile shared before arrival</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;color:rgba(255,255,255,0.75);">
+            <div style="width:38px;height:38px;background:rgba(215,38,61,0.20);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#ff8a96;font-size:1.1rem;flex-shrink:0;"><i class="bi bi-check-circle-fill"></i></div>
+            <span style="font-size:0.90rem;">Free nurse replacement if unsatisfied</span>
+          </div>
+        </div>
+        <div style="margin-top:36px;padding:20px 24px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:14px;">
+          <div style="font-family:var(--font-head);font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:10px;">Or Call / WhatsApp Directly</div>
+          <a href="tel:+911234567890" style="display:flex;align-items:center;gap:10px;color:white;font-family:var(--font-head);font-weight:700;font-size:1.1rem;text-decoration:none;margin-bottom:8px;">
+            <i class="bi bi-telephone-fill" style="color:var(--red);"></i> +91 12345 67890
+          </a>
+          <a href="https://wa.me/911234567890" target="_blank" style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.65);font-size:0.88rem;text-decoration:none;">
+            <i class="bi bi-whatsapp" style="color:#25d366;font-size:1.1rem;"></i> WhatsApp for instant response
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="col-lg-7 position-relative" style="z-index:2;">
+        <div class="booking-form-card">
+          <h3 style="font-family:var(--font-head);font-size:1.4rem;font-weight:800;color:var(--navy);margin-bottom:4px;">Book Home Nursing Service</h3>
+          <p style="font-size:0.86rem;color:var(--mid);margin-bottom:26px;">Fill in the details below — our coordinator will call back within 30 minutes.</p>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label class="form-label">Patient Name <span style="color:var(--red)">*</span></label>
+              <input type="text" class="form-control" placeholder="Full name of patient">
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label">Contact Person</label>
+              <input type="text" class="form-control" placeholder="Your name (relation)">
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label">Phone Number <span style="color:var(--red)">*</span></label>
+              <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label">City / Location</label>
+              <input type="text" class="form-control" placeholder="e.g. New Delhi, Noida">
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label">Service Required <span style="color:var(--red)">*</span></label>
+              <select class="form-select">
+                <option value="">— Select service —</option>
+                <option>ICU Setup at Home</option>
+                <option>Medical Attendant</option>
+                <option>Paralysis Patient Care</option>
+                <option>Accidental Patient Care</option>
+                <option>Coma Patient Care</option>
+                <option>Elder Care</option>
+                <option>Critical Care</option>
+                <option>Dementia Care</option>
+                <option>Cardiac Patient Care</option>
+                <option>Trauma Care</option>
+                <option>Neuro Care</option>
+                <option>Cancer Patient Care</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label">Shift Type <span style="color:var(--red)">*</span></label>
+              <select class="form-select">
+                <option value="">— Select shift —</option>
+                <option>12-Hour Day Shift (8AM – 8PM)</option>
+                <option>12-Hour Night Shift (8PM – 8AM)</option>
+                <option>24-Hour Live-In Care</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label">Care Start Date</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label">Expected Duration</label>
+              <select class="form-select">
+                <option value="">— Select duration —</option>
+                <option>1–7 Days</option>
+                <option>1–4 Weeks</option>
+                <option>1–3 Months</option>
+                <option>Long Term (3+ Months)</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Patient Condition / Special Notes</label>
+              <textarea class="form-control" rows="3" placeholder="Brief description of patient's condition, any special requirements, medical history or medications..."></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn-xpert w-100 justify-content-center" style="font-size:1rem;padding:14px;">
+                <i class="bi bi-calendar-check-fill"></i> Confirm Booking Request
+              </button>
+              <p style="font-size:0.78rem;color:var(--mid);margin-top:10px;text-align:center;">
+                <i class="bi bi-shield-check" style="color:var(--red);"></i> Your information is secure and never shared with third parties.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-8">
+        <h2>Need a Nurse Urgently?</h2>
+        <p>Call us now — we can deploy a certified nurse to your home within 4–6 hours in Delhi NCR and major cities.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end d-flex flex-wrap gap-3 justify-content-lg-end">
+        <a href="tel:+911234567890" class="btn-xpert"><i class="bi bi-telephone"></i> Call Now</a>
+        <a href="https://wa.me/911234567890" class="btn-xpert-outline" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="site-footer"></div>
+<script src="./component.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Set min date for date picker to today
+  const dateInput = document.querySelector('input[type="date"]');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+    dateInput.value = today;
+  }
+</script>
+</body>
+</html>
