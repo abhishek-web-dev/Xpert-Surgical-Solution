@@ -7,7 +7,7 @@
       <a href="mailto:Xpertsurgicalsolution@gmail.com"><i class="bi bi-envelope-fill"></i>xpertsurgicalsolution@gmail.com</a>
     </div>
     <div class="d-none d-md-block">
-      <a href="#"><i class="bi bi-clock-fill"></i>Mon - Sat: 9:00 AM - 7:00 PM</a>
+      <a href="#"><i class="bi bi-clock-fill"></i>Mon - Sun: 24 Hours</a>
     </div>
   </div>
 </div>
